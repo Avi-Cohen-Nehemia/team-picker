@@ -1,5 +1,5 @@
 export const initialState = {
-    playersPool = [],
+    playersPool: [],
 };
 
 export default initialState;
