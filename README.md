@@ -7,12 +7,12 @@ We were encourged to get creative and develop as many extra features as we want.
 
 ## Installation
 
-### Clone Repository
+Start by cloning the repository
 ```
 git clone git@github.com:Avi-Cohen-Nehemia/team-picker.git
 ```
 
-### Install And Launch App
+Then Install And Launch the App
 ```
 npm i && npm start
 ```
