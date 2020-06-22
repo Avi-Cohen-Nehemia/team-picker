@@ -32,29 +32,23 @@ const shuffle = (array) => {
 // suffle the playersPool
 const shufflePlayersReducer = (state) => shuffle(...state.playersPool);
 
-// generate team A
-const generateTeamAReducer = (state) => {
-    return state.playersPool.filter((_, index) => index < state.playersPool.length / 2);
-}
+// geneerate the teams and store them in state
+const generateTeamsReducer = (state) => {
 
-// generate team B
-const generateTeamBReducer = (state) => {
-    return state.playersPool.filter((_, index) => index >= state.playersPool.length / 2);
-}
+    let teamA = state.playersPool.filter((_, index) => index < state.playersPool.length / 2);
+    let teamB = state.playersPool.filter((_, index) => index >= state.playersPool.length / 2);
 
-// store teams A and B in state
-const dividePlayersReducer = (state) => {
     return {
         ...state,
-        teamA: generateTeamAReducer(),
-        teamB: generateTeamBReducer(),
+        teamA: teamA,
+        teamB: teamB,
     }
 }
 
 const reducer = (state, action) => {
     switch (action.type) {
         case "ADD_PLAYER": return addPlayerReducer(state, action);
-        case "GENERATE_TEAMS": return {...state};
+        case "GENERATE_TEAMS": return generateTeamsReducer(shufflePlayersReducer(state));
         case "RESET": return initialState;
         default: return state;
     }
