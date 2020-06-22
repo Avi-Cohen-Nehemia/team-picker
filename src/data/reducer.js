@@ -10,7 +10,7 @@ const addPlayerReducer = (state, action) => {
 };
 
 // Fisher–Yates shuffle
-const shuffleReducer = (array) => {
+const shuffle = (array) => {
 
     let newIndex;
     let temporaryIndex;
@@ -28,6 +28,28 @@ const shuffleReducer = (array) => {
 
     return array;
 };
+
+// suffle the playersPool
+const shufflePlayersReducer = (state) => shuffle(...state.playersPool);
+
+// generate team A
+const generateTeamAReducer = (state) => {
+    return state.playersPool.filter((_, index) => index < state.playersPool.length / 2);
+}
+
+// generate team B
+const generateTeamBReducer = (state) => {
+    return state.playersPool.filter((_, index) => index >= state.playersPool.length / 2);
+}
+
+// store teams A and B in state
+const dividePlayersReducer = (state) => {
+    return {
+        ...state,
+        teamA: generateTeamAReducer(),
+        teamB: generateTeamBReducer(),
+    }
+}
 
 const reducer = (state, action) => {
     switch (action.type) {
