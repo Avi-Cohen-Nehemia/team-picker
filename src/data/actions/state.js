@@ -1,6 +1,6 @@
-export const doSomething = (data) => {
+export const addPlayer = (data) => {
     return {
-        type: "SOMETHING",
-        ...data
+        type: "ADD_PLAYER",
+        playerName: data.playerName,
     };
 };

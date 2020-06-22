@@ -22,13 +22,13 @@ class AddPlayer extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.handleSubmit(this.state);
+        this.props.handleSubmit({ ...this.state });
     }
 
     render() {
         return(
             <React.Fragment>
-                <Form>
+                <Form onSubmit={ this.handleSubmit }>
                     <Form.Group>
                         <Form.Label>
                             Create a player
@@ -39,14 +39,13 @@ class AddPlayer extends Component {
                             onChange={ this.handlePlayerName }
                         />
                     </Form.Group>
+                    <Button
+                        variant="success"
+                        type="submit"
+                    >
+                        Add Player
+                    </Button>
                 </Form>
-                <Button
-                    variant="success"
-                    type="submit"
-                    onClick={ this.handleSubmit }
-                >
-                    Add Player
-                </Button>
             </React.Fragment>
         );
     }

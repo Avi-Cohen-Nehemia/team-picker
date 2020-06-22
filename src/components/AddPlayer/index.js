@@ -1,18 +1,18 @@
 import { connect } from "react-redux";
 import AddPlayer from "./AddPlayer";
 
+import { addPlayer } from "../../data/actions/state";
+
 const mapStateToProps = (state) => {
     return {
-        player1Name: state.playerName,
+        playerName: state.playerName,
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleSubmit: data => {
-            dispatch(addPlayer(data));
-        },
-    };
-};
+        handleSubmit: (data) => dispatch(addPlayer(data)),
+    }
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddPlayer);
