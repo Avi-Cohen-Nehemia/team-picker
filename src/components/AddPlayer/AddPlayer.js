@@ -30,8 +30,14 @@ class AddPlayer extends Component {
             <React.Fragment>
                 <Form>
                     <Form.Group>
-                        <Form.Label>Create a player</Form.Label>
-                        <Form.Control type="text" placeholder="Enter player's Name" />
+                        <Form.Label>
+                            Create a player
+                        </Form.Label>
+                        <Form.Control
+                            type="text"
+                            placeholder="Enter player's Name"
+                            onChange={ this.handlePlayerName }
+                        />
                     </Form.Group>
                 </Form>
                 <Button
