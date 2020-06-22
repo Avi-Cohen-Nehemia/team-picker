@@ -1,13 +1,13 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 
-const Reset = ({ handleGenerateTeams }) => (
+const GenerateTeams = ({ handleGenerateTeams }) => (
     <Button
         variant="success"
         onClick={ handleGenerateTeams }
     >
-        Reset
+        Generate Teams
     </Button>
 );
 
-export default Reset;
+export default GenerateTeams;

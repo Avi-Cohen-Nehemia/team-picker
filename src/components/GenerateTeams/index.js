@@ -4,7 +4,7 @@ import GenerateTeams from "./GenerateTeams";
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleGenerateTeams: (data) => dispatch(generateTeams(data)),
+        handleGenerateTeams: () => dispatch(generateTeams()),
     }
 }
 

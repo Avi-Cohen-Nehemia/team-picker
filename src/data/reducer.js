@@ -2,7 +2,7 @@
 import initialState from "./initialState";
 
 // adding the new player to the playersPool
-const addPlayerReducer = (state, action) => {
+const addPlayer = (state, action) => {
     return {
         ...state,
         playersPool: [...state.playersPool, action.playerName]
@@ -30,25 +30,30 @@ const shuffle = (array) => {
 };
 
 // suffle the playersPool
-const shufflePlayersReducer = (state) => shuffle(...state.playersPool);
+const shufflePlayers = (state) => {
+    return {
+        ...state,
+        playersPool: shuffle(state.playersPool),
+    }
+}
 
 // geneerate the teams and store them in state
-const generateTeamsReducer = (state) => {
+const generateTeams = (state) => {
 
-    let teamA = state.playersPool.filter((_, index) => index < state.playersPool.length / 2);
-    let teamB = state.playersPool.filter((_, index) => index >= state.playersPool.length / 2);
+    let firstHalf = state.playersPool.filter((_, index) => index < state.playersPool.length / 2);
+    let secondHalf = state.playersPool.filter((_, index) => index >= state.playersPool.length / 2);
 
     return {
         ...state,
-        teamA: teamA,
-        teamB: teamB,
+        teamA: firstHalf,
+        teamB: secondHalf,
     }
 }
 
 const reducer = (state, action) => {
     switch (action.type) {
-        case "ADD_PLAYER": return addPlayerReducer(state, action);
-        case "GENERATE_TEAMS": return generateTeamsReducer(shufflePlayersReducer(state));
+        case "ADD_PLAYER": return addPlayer(state, action);
+        case "GENERATE_TEAMS": return generateTeams(shufflePlayers(state));
         case "RESET": return initialState;
         default: return state;
     }
