@@ -4,3 +4,9 @@ export const addPlayer = (data) => {
         playerName: data.playerName,
     };
 };
+
+export const reset = () => {
+    return {
+        type: "RESET",
+    }
+}
