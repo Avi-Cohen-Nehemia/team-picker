@@ -5,6 +5,12 @@ export const addPlayer = (data) => {
     };
 };
 
+export const generateTeams = () => {
+    return {
+        type: "GENERATE_TEAMS",
+    }
+}
+
 export const reset = () => {
     return {
         type: "RESET",
