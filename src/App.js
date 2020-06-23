@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import AddPlayer from "./components/AddPlayer";
 import PlayersTable from "./components/PlayersTable";
 import Reset from "./components/Reset";
@@ -9,11 +9,17 @@ import GenerateTeams from './components/GenerateTeams';
 
 const App = () => (
     <Router>
-        <AddPlayer/>
-        <PlayersTable/>
-        <GenerateTeams/>
-        <TeamTable/>
-        <Reset/>
+        <Route exact path="/create-players">
+            <AddPlayer/>
+            <PlayersTable/>
+            <GenerateTeams/>
+            <Reset/>
+        </Route>
+
+        <Route exact path="/teams">
+            <TeamTable/>
+            <Reset/>
+        </Route>
     </Router>
 );
 
