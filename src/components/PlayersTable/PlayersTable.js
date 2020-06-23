@@ -7,6 +7,7 @@ const PlayersTable = ({ playersPool }) => (
             <tr>
                 <th>#</th>
                 <th>Player's Name</th>
+                <th>Player's Strength</th>
             </tr>
         </thead>
         <tbody>
@@ -14,6 +15,7 @@ const PlayersTable = ({ playersPool }) => (
                 <tr key={ index }>
                     <td>{ index + 1 }</td>
                     <td>{ player }</td>
+                    <td>{ player.strength }</td>
                 </tr>
             )) }
         </tbody>
