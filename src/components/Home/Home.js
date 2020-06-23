@@ -15,19 +15,19 @@ const Home = () => (
     >
         <div className="justify-content-center d-flex align-items-center flex-column">
             <h1>
+                <img src={ logo } alt="football" width="130" height="130"/>
                 Welcome to Football Team Generator!
-                <img src={ logo } alt="football" width="150" height="150"/>
+                <img src={ logo } alt="football" width="130" height="130"/>
             </h1>
-            <h6>
-                This is a simple hero unit, a simple jumbotron-style component for calling
-                extra attention to featured content or information.
-            </h6>
-            <br/>
-            <h6>
-                This is a simple hero unit, a simple jumbotron-style component for calling
-                extra attention to featured content or information.
-            </h6>
-            <br/>
+            <h5 className="mb-5">
+                <span role="img" aria-label="man-running">🏃‍♂️</span> Create players and split them randomly into 2 groups
+            </h5>
+            <h5 className="mb-5">
+                <span role="img" aria-label="shirt">👕</span> Customize your teams
+            </h5>
+            <h5 className="mb-5">
+                <span role="img" aria-label="laptop">💻</span> Share with your friends!
+            </h5>
             <Start/>
         </div>
     </Jumbotron>
