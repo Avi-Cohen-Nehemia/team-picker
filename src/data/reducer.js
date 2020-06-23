@@ -5,7 +5,7 @@ import initialState from "./initialState";
 const addPlayer = (state, action) => {
     return {
         ...state,
-        playersPool: [...state.playersPool, action.playerName]
+        playersPool: [...state.playersPool, action.player]
     }
 };
 
