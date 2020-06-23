@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import history from "./history";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import AddPlayer from "./components/AddPlayer";
@@ -9,7 +10,7 @@ import TeamTable from './components/TeamTable';
 import GenerateTeams from './components/GenerateTeams';
 
 const App = () => (
-    <Router>
+    <Router history={ history }>
         <Route exact path="/" component={ Home }/>
         <Route exact path="/create-players">
             <AddPlayer/>
