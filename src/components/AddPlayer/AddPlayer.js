@@ -45,16 +45,22 @@ class AddPlayer extends Component {
                             onChange={ this.handlePlayerName }
                         />
                     </Form.Group>
+
                     <Form.Group>
                         <Form.Label>
                             Player Strength
                         </Form.Label>
                         <Form.Control
-                            type="number"
+                            as="select"
                             placeholder="Enter player's strength level"
                             onChange={ this.handlePlayerStrength }
-                        />
+                        >
+                            <option>&#11088;</option>
+                            <option>&#11088;&#11088;</option>
+                            <option>&#11088;&#11088;&#11088;</option>
+                        </Form.Control>
                     </Form.Group>
+
                     <Button
                         variant="success"
                         type="submit"
