@@ -37,6 +37,7 @@ const shufflePlayers = (state) => {
     }
 }
 
+
 // geneerate the teams and store them in state
 const generateTeams = (state) => {
 
