@@ -11,7 +11,7 @@ const TeamTable = ({ teamA, teamB }) => (
                 <Card.Header>Team A</Card.Header>
                 <ListGroup variant="flush">
                     { teamA.map((player, index) => (
-                        <ListGroup.Item key={ index }>{ player }</ListGroup.Item>
+                        <ListGroup.Item key={ index }>{ player.name + " " + player.strength}</ListGroup.Item>
                     )) }
                 </ListGroup>
             </Card>
@@ -19,7 +19,7 @@ const TeamTable = ({ teamA, teamB }) => (
                 <Card.Header>Team B</Card.Header>
                 <ListGroup variant="flush">
                     { teamB.map((player, index) => (
-                        <ListGroup.Item key={ index }>{ player }</ListGroup.Item>
+                        <ListGroup.Item key={ index }>{ player.name + " " + player.strength}</ListGroup.Item>
                     )) }
                 </ListGroup>
             </Card>
