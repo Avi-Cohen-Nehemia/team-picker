@@ -1,7 +1,10 @@
 export const addPlayer = (data) => {
     return {
         type: "ADD_PLAYER",
-        playerName: data.playerName,
+        player: {
+            name: data.playerName,
+            strength: data.playerStrength,
+        } 
     };
 };
 

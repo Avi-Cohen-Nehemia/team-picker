@@ -10,14 +10,20 @@ class AddPlayer extends Component {
 
         this.state = {
             playerName: props.playerName,
+            playerStrength: props.playerStrength
         };
 
         this.handlePlayerName = this.handlePlayerName.bind(this);
+        this.handlePlayerStrength = this.handlePlayerStrength.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handlePlayerName(e) {
         this.setState({ playerName: e.currentTarget.value });
+    }
+
+    handlePlayerStrength(e) {
+        this.setState({ playerStrength: e.currentTarget.value });
     }
 
     handleSubmit(e) {
@@ -31,14 +37,30 @@ class AddPlayer extends Component {
                 <Form onSubmit={ this.handleSubmit }>
                     <Form.Group>
                         <Form.Label>
-                            Create a player
+                            Player Name
                         </Form.Label>
                         <Form.Control
                             type="text"
-                            placeholder="Enter player's Name"
+                            placeholder="Enter player's name"
                             onChange={ this.handlePlayerName }
                         />
                     </Form.Group>
+
+                    <Form.Group>
+                        <Form.Label>
+                            Player Strength
+                        </Form.Label>
+                        <Form.Control
+                            as="select"
+                            placeholder="Enter player's strength level"
+                            onChange={ this.handlePlayerStrength }
+                        >
+                            <option>&#11088;</option>
+                            <option>&#11088;&#11088;</option>
+                            <option>&#11088;&#11088;&#11088;</option>
+                        </Form.Control>
+                    </Form.Group>
+
                     <Button
                         variant="success"
                         type="submit"
