@@ -1,9 +1,9 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 
-const GenerateTeams = ({ text, handleGenerateTeams, conditionsNotMet }) => (
+const GenerateTeams = ({ text, color, handleGenerateTeams, conditionsNotMet }) => (
     <Button
-        variant="success"
+        variant={ color }
         onClick={ handleGenerateTeams }
         disabled={ conditionsNotMet }
     >
