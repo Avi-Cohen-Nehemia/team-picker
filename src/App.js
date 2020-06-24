@@ -61,6 +61,11 @@ const App = () => (
                 </Row>
             </Container>
         </Route>
+        <Route exact path="/customize-teams">
+            <Container>
+                
+            </Container>
+        </Route>
     </Router>
 );
 
