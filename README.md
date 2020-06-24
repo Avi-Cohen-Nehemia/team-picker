@@ -1,4 +1,4 @@
-# Team Picker - Technical Challenge
+# Team Generator - Technical Challenge
 
 Technical challenge set to us by DevelopMe_ to demonstrate our skills as fresh grduates
 We were tasked with creating and deploying an application that creates 2 teams out of a list of 10 people.
@@ -20,3 +20,11 @@ npm i && npm start
 ## Technology Stack
 - React
 - Redux
+
+## MVP
+
+The core of the challenge is to create a tool which randomly picks 5-a-side football teams from a list of 10 names.
+
+## Additional features
+
+## Unresolved issues
