@@ -24,7 +24,7 @@ const App = () => (
                 <Row>
                     <Col className="justify-content-center d-flex">
                         <Link to="/confirm-teams">
-                            <GenerateTeams/>
+                            <GenerateTeams text={ "Generate Teams" }/>
                         </Link>
                     </Col>
                     <Col className="justify-content-center d-flex">
