@@ -52,6 +52,7 @@ class AddPlayer extends Component {
                                     placeholder="Enter player's name"
                                     onChange={ this.handlePlayerName }
                                     value={this.state.playerName}
+                                    maxlength="20"
                                 />
                             </Form.Group>
                         </Col>
@@ -78,7 +79,6 @@ class AddPlayer extends Component {
                             <Button
                                 variant="success"
                                 type="submit"
-                                
                             >
                                 Add Player
                             </Button>

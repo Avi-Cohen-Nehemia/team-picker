@@ -30,7 +30,7 @@ const App = () => (
             </Container>
         </Route>
 
-        <Route exact path="/teams">
+        <Route exact path="/confirm-teams">
             <TeamTable/>
             <Reset/>
         </Route>
