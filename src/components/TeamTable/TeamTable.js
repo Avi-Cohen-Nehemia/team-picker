@@ -1,12 +1,12 @@
 import React from "react";
 import Card from 'react-bootstrap/Card'
 import ListGroup from "react-bootstrap/ListGroup"
-import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 const TeamTable = ({ teamA, teamB }) => (
-    <Container>
-        <Row>
+    <Row>
+        <Col>
             <Card>
                 <Card.Header>Team A</Card.Header>
                 <ListGroup variant="flush">
@@ -15,6 +15,8 @@ const TeamTable = ({ teamA, teamB }) => (
                     )) }
                 </ListGroup>
             </Card>
+        </Col>
+        <Col>
             <Card>
                 <Card.Header>Team B</Card.Header>
                 <ListGroup variant="flush">
@@ -23,8 +25,8 @@ const TeamTable = ({ teamA, teamB }) => (
                     )) }
                 </ListGroup>
             </Card>
-        </Row>
-    </Container>
+        </Col>
+    </Row>
 );
 
 export default TeamTable;
