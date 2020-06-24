@@ -52,7 +52,7 @@ class AddPlayer extends Component {
                                     placeholder="Enter player's name"
                                     onChange={ this.handlePlayerName }
                                     value={this.state.playerName}
-                                    maxlength="20"
+                                    maxLength="20"
                                 />
                             </Form.Group>
                         </Col>

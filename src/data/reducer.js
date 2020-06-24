@@ -3,9 +3,16 @@ import initialState from "./initialState";
 
 // adding the new player to the playersPool
 const addPlayer = (state, action) => {
-    return {
-        ...state,
-        playersPool: [...state.playersPool, action.player]
+    if (state.playersPool.length < 12) {
+        return {
+            ...state,
+            playersPool: [...state.playersPool, action.player]
+        }
+    } else {
+        return {
+            ...state,
+            playersPool: [...state.playersPool],
+        }
     }
 };
 
