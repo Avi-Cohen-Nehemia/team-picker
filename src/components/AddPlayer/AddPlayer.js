@@ -41,7 +41,7 @@ class AddPlayer extends Component {
                     className="pt-5"
                 >
                     <Form.Row>
-                        <Col>
+                        <Col sm={3}>
                             <Form.Group>
                                 <Form.Label style={{ color: "white" }}>
                                     <strong>Player Name</strong>
@@ -55,7 +55,7 @@ class AddPlayer extends Component {
                                 />
                             </Form.Group>
                         </Col>
-                        <Col>
+                        <Col sm={2}>
                             <Form.Group>
                                 <Form.Label style={{ color: "white" }}>
                                     <strong>Player Skill Level</strong>
@@ -72,14 +72,18 @@ class AddPlayer extends Component {
                                 </Form.Control>
                             </Form.Group>
                         </Col>
+                        <Col
+                            sm={2}
+                            className="align-items-center d-flex mt-3">
+                            <Button
+                                variant="success"
+                                type="submit"
+                                
+                            >
+                                Add Player
+                            </Button>
+                        </Col>
                     </Form.Row>
-
-                    <Button
-                        variant="success"
-                        type="submit"
-                    >
-                        Add Player
-                    </Button>
                 </Form>
             </React.Fragment>
         );
