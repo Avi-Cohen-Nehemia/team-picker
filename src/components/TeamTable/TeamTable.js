@@ -1,17 +1,17 @@
 import React from "react";
 import Card from 'react-bootstrap/Card'
 import ListGroup from "react-bootstrap/ListGroup"
+import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
 const TeamTable = ({ teamA, teamB }) => (
-    <Row>
-        { teamA.length ?
-        <>
+    <Container>
+        <Row>
             <Card>
                 <Card.Header>Team A</Card.Header>
                 <ListGroup variant="flush">
                     { teamA.map((player, index) => (
-                        <ListGroup.Item key={ index }>{ player.name + " " + player.strength}</ListGroup.Item>
+                        <ListGroup.Item key={ index }>{ player.name + " " + player.skillLevel}</ListGroup.Item>
                     )) }
                 </ListGroup>
             </Card>
@@ -19,13 +19,12 @@ const TeamTable = ({ teamA, teamB }) => (
                 <Card.Header>Team B</Card.Header>
                 <ListGroup variant="flush">
                     { teamB.map((player, index) => (
-                        <ListGroup.Item key={ index }>{ player.name + " " + player.strength}</ListGroup.Item>
+                        <ListGroup.Item key={ index }>{ player.name + " " + player.skillLevel}</ListGroup.Item>
                     )) }
                 </ListGroup>
             </Card>
-        </>
-        : null }
-    </Row>
+        </Row>
+    </Container>
 );
 
 export default TeamTable;
