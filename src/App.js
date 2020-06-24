@@ -32,7 +32,7 @@ const App = () => (
                         </Link>
                     </Col>
                     <Col className="justify-content-center d-flex">
-                        <Reset/>
+                        <Reset text={ "Reset" }/>
                     </Col>
                 </Row>
             </Container>
@@ -54,7 +54,9 @@ const App = () => (
                         />
                     </Col>
                     <Col className="justify-content-center d-flex">
-                        <Reset/>
+                        <Link to="/create-players">
+                            <Reset text={ "Start Over" }/>
+                        </Link>
                     </Col>
                 </Row>
             </Container>
