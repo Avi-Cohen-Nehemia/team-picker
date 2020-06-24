@@ -30,7 +30,7 @@ class AddPlayer extends Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.handleSubmit({ ...this.state });
-        this.setState({ playerName: "" });
+        this.setState({ playerName: "" })
     }
 
     render() {
@@ -43,30 +43,32 @@ class AddPlayer extends Component {
                     <Form.Row>
                         <Col>
                             <Form.Group>
-                                <Form.Label>
-                                    Player Name
+                                <Form.Label style={{ color: "white" }}>
+                                    <strong>Player Name</strong>
                                 </Form.Label>
                                 <Form.Control
                                     required
                                     type="text"
                                     placeholder="Enter player's name"
                                     onChange={ this.handlePlayerName }
+                                    value={this.state.playerName}
                                 />
                             </Form.Group>
                         </Col>
                         <Col>
                             <Form.Group>
-                                <Form.Label>
-                                    Player Strength
+                                <Form.Label style={{ color: "white" }}>
+                                    <strong>Player Strength</strong>
                                 </Form.Label>
                                 <Form.Control
                                     as="select"
                                     placeholder="Enter player's strength level"
                                     onChange={ this.handlePlayerStrength }
+                                    value={this.state.playerStrength}
                                 >
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
+                                    <option>⭐</option>
+                                    <option>⭐⭐</option>
+                                    <option>⭐⭐⭐</option>
                                 </Form.Control>
                             </Form.Group>
                         </Col>

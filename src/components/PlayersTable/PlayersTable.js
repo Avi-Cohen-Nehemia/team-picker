@@ -2,7 +2,14 @@ import React from "react";
 import Table from "react-bootstrap/Table";
 
 const PlayersTable = ({ playersPool }) => (
-    <Table striped bordered hover variant="dark">
+    <Table
+        striped
+        bordered
+        hover
+        size="sm"
+        variant="dark"
+        className="mt-3"
+    >
         <thead>
             <tr>
                 <th>#</th>
