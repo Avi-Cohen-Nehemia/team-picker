@@ -3,7 +3,7 @@ export const addPlayer = (data) => {
         type: "ADD_PLAYER",
         player: {
             name: data.playerName,
-            strength: data.playerStrength,
+            skillLevel: data.playerSkillLevel,
         } 
     };
 };

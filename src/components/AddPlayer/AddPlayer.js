@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
 
 class AddPlayer extends Component {
 
@@ -10,11 +11,11 @@ class AddPlayer extends Component {
 
         this.state = {
             playerName: props.playerName,
-            playerStrength: props.playerStrength
+            playerSkillLevel: props.playerSkillLevel
         };
 
         this.handlePlayerName = this.handlePlayerName.bind(this);
-        this.handlePlayerStrength = this.handlePlayerStrength.bind(this);
+        this.handlePlayerSkillLevel = this.handlePlayerSkillLevel.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -22,51 +23,67 @@ class AddPlayer extends Component {
         this.setState({ playerName: e.currentTarget.value });
     }
 
-    handlePlayerStrength(e) {
-        this.setState({ playerStrength: e.currentTarget.value });
+    handlePlayerSkillLevel(e) {
+        this.setState({ playerSkillLevel: e.currentTarget.value });
     }
 
     handleSubmit(e) {
         e.preventDefault();
         this.props.handleSubmit({ ...this.state });
+        this.setState({ playerName: "", playerSkillLevel: "⭐" })
     }
 
     render() {
         return(
             <React.Fragment>
-                <Form onSubmit={ this.handleSubmit }>
-                    <Form.Group>
-                        <Form.Label>
-                            Player Name
-                        </Form.Label>
-                        <Form.Control
-                            type="text"
-                            placeholder="Enter player's name"
-                            onChange={ this.handlePlayerName }
-                        />
-                    </Form.Group>
-
-                    <Form.Group>
-                        <Form.Label>
-                            Player Strength
-                        </Form.Label>
-                        <Form.Control
-                            as="select"
-                            placeholder="Enter player's strength level"
-                            onChange={ this.handlePlayerStrength }
-                        >
-                            <option>&#11088;</option>
-                            <option>&#11088;&#11088;</option>
-                            <option>&#11088;&#11088;&#11088;</option>
-                        </Form.Control>
-                    </Form.Group>
-
-                    <Button
-                        variant="success"
-                        type="submit"
-                    >
-                        Add Player
-                    </Button>
+                <Form
+                    onSubmit={ this.handleSubmit }
+                    className="pt-5"
+                >
+                    <Form.Row>
+                        <Col sm={3}>
+                            <Form.Group>
+                                <Form.Label style={{ color: "white" }}>
+                                    <strong>Player Name</strong>
+                                </Form.Label>
+                                <Form.Control
+                                    required
+                                    type="text"
+                                    placeholder="Enter player's name"
+                                    onChange={ this.handlePlayerName }
+                                    value={this.state.playerName}
+                                    maxLength="20"
+                                />
+                            </Form.Group>
+                        </Col>
+                        <Col sm={2}>
+                            <Form.Group>
+                                <Form.Label style={{ color: "white" }}>
+                                    <strong>Player Skill Level</strong>
+                                </Form.Label>
+                                <Form.Control
+                                    as="select"
+                                    placeholder="Enter player's strength level"
+                                    onChange={ this.handlePlayerSkillLevel }
+                                    value={this.state.playerSkillLevel}
+                                >
+                                    <option>⭐</option>
+                                    <option>⭐⭐</option>
+                                    <option>⭐⭐⭐</option>
+                                </Form.Control>
+                            </Form.Group>
+                        </Col>
+                        <Col
+                            sm={2}
+                            className="align-items-center d-flex mt-3">
+                            <Button
+                                variant="success"
+                                type="submit"
+                            >
+                                Add Player
+                            </Button>
+                        </Col>
+                    </Form.Row>
                 </Form>
             </React.Fragment>
         );

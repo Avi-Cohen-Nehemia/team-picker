@@ -6,7 +6,7 @@ import { addPlayer } from "../../data/actions/state";
 const mapStateToProps = (state) => {
     return {
         playerName: state.playerName,
-        playerStrength: state.playerStrength,
+        playerSkillLevel: state.playerSkillLevel ? state.playerSkillLevel : "⭐",
     };
 };
 
