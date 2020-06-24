@@ -13,6 +13,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import AlertMessage from './components/AlertMessage';
 import Button from 'react-bootstrap/Button';
+import CustomizeTeams from './components/CustomizeTeam/CustomizeTeam';
 
 const App = () => (
     <Router history={ history }>
@@ -63,7 +64,7 @@ const App = () => (
         </Route>
         <Route exact path="/customize-teams">
             <Container>
-                
+                <CustomizeTeams/>
             </Container>
         </Route>
     </Router>
