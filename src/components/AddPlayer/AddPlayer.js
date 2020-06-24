@@ -11,11 +11,11 @@ class AddPlayer extends Component {
 
         this.state = {
             playerName: props.playerName,
-            playerStrength: props.playerStrength
+            playerSkillLevel: props.playerSkillLevel
         };
 
         this.handlePlayerName = this.handlePlayerName.bind(this);
-        this.handlePlayerStrength = this.handlePlayerStrength.bind(this);
+        this.handlePlayerSkillLevel = this.handlePlayerSkillLevel.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -23,14 +23,14 @@ class AddPlayer extends Component {
         this.setState({ playerName: e.currentTarget.value });
     }
 
-    handlePlayerStrength(e) {
-        this.setState({ playerStrength: e.currentTarget.value });
+    handlePlayerSkillLevel(e) {
+        this.setState({ playerSkillLevel: e.currentTarget.value });
     }
 
     handleSubmit(e) {
         e.preventDefault();
         this.props.handleSubmit({ ...this.state });
-        this.setState({ playerName: "" })
+        this.setState({ playerName: "", playerSkillLevel: "⭐" })
     }
 
     render() {
@@ -58,13 +58,13 @@ class AddPlayer extends Component {
                         <Col>
                             <Form.Group>
                                 <Form.Label style={{ color: "white" }}>
-                                    <strong>Player Strength</strong>
+                                    <strong>Player Skill Level</strong>
                                 </Form.Label>
                                 <Form.Control
                                     as="select"
                                     placeholder="Enter player's strength level"
-                                    onChange={ this.handlePlayerStrength }
-                                    value={this.state.playerStrength}
+                                    onChange={ this.handlePlayerSkillLevel }
+                                    value={this.state.playerSkillLevel}
                                 >
                                     <option>⭐</option>
                                     <option>⭐⭐</option>
