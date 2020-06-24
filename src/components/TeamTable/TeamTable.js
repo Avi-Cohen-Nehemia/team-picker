@@ -7,21 +7,33 @@ import Col from 'react-bootstrap/Col'
 const TeamTable = ({ teamA, teamB }) => (
     <Row className="pt-5">
         <Col>
-            <Card>
+            <Card className="text-center">
                 <Card.Header>Team A</Card.Header>
                 <ListGroup variant="flush">
                     { teamA.map((player, index) => (
-                        <ListGroup.Item key={ index }>{ player.name + " " + player.skillLevel}</ListGroup.Item>
+                        <ListGroup.Item
+                            key={ index }
+                            className="d-flex justify-content-around"
+                        >
+                            <span>{ player.name}</span>
+                            <span>{player.skillLevel}</span>
+                        </ListGroup.Item>
                     )) }
                 </ListGroup>
             </Card>
         </Col>
         <Col>
-            <Card>
+            <Card className="text-center">
                 <Card.Header>Team B</Card.Header>
                 <ListGroup variant="flush">
                     { teamB.map((player, index) => (
-                        <ListGroup.Item key={ index }>{ player.name + " " + player.skillLevel}</ListGroup.Item>
+                        <ListGroup.Item
+                            key={ index }
+                            className="d-flex justify-content-around"
+                        >
+                            <span>{ player.name}</span>
+                            <span>{player.skillLevel}</span>
+                        </ListGroup.Item>
                     )) }
                 </ListGroup>
             </Card>
