@@ -20,9 +20,8 @@ const addPlayer = (state, action) => {
 const shufflePlayers = (state) => {
     return {
         ...state,
-        playersPool: [
-            ...state.playersPool.sort(() => Math.random() - 0.5)
-        ]}
+        playersPool: [...state.playersPool.sort(() => Math.random() - 0.5)]
+    }
 }
 
 
