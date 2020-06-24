@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import history from "./history";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from "./components/Home/Home";
 import AddPlayer from "./components/AddPlayer";
 import PlayersTable from "./components/PlayersTable";
@@ -23,7 +23,9 @@ const App = () => (
             <Container>
                 <Row>
                     <Col className="justify-content-center d-flex">
-                        <GenerateTeams/>
+                        <Link to="/confirm-teams">
+                            <GenerateTeams/>
+                        </Link>
                     </Col>
                     <Col className="justify-content-center d-flex">
                         <Reset/>

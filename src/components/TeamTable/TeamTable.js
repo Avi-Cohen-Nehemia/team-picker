@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 const TeamTable = ({ teamA, teamB }) => (
-    <Row>
+    <Row className="pt-5">
         <Col>
             <Card>
                 <Card.Header>Team A</Card.Header>
