@@ -11,12 +11,14 @@ import GenerateTeams from './components/GenerateTeams';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import AlertMessage from './components/AlertMessage';
 
 const App = () => (
     <Router history={ history }>
         <Route exact path="/" component={ Home }/>
         <Route exact path="/create-players">
             <AddPlayer/>
+            <AlertMessage/>
             <PlayersTable/>
             <Container>
                 <Row>
