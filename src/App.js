@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import history from "./history";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Router, Route, Link } from "react-router-dom";
 import Home from "./components/Home/Home";
 import AddPlayer from "./components/AddPlayer";
 import PlayersTable from "./components/PlayersTable";
@@ -12,6 +12,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import AlertMessage from './components/AlertMessage';
+import Button from 'react-bootstrap/Button';
 
 const App = () => (
     <Router history={ history }>
@@ -23,18 +24,42 @@ const App = () => (
             <Container>
                 <Row>
                     <Col className="justify-content-center d-flex">
-                        <GenerateTeams/>
+                        <Link to="/confirm-teams">
+                            <GenerateTeams
+                                text={ "Generate Teams" }
+                                color={ "success" }
+                            />
+                        </Link>
                     </Col>
                     <Col className="justify-content-center d-flex">
-                        <Reset/>
+                        <Reset text={ "Reset" }/>
                     </Col>
                 </Row>
             </Container>
         </Route>
 
         <Route exact path="/confirm-teams">
-            <TeamTable/>
-            <Reset/>
+            <Container>
+                <TeamTable/>
+                <Row className="mt-4">
+                    <Col className="justify-content-center d-flex">
+                        <Button variant="success">
+                            Confirm Teams
+                        </Button>
+                    </Col>
+                    <Col className="justify-content-center d-flex">
+                        <GenerateTeams
+                            text={ "Reshuffle Teams" }
+                            color={ "warning" }
+                        />
+                    </Col>
+                    <Col className="justify-content-center d-flex">
+                        <Link to="/create-players">
+                            <Reset text={ "Start Over" }/>
+                        </Link>
+                    </Col>
+                </Row>
+            </Container>
         </Route>
     </Router>
 );

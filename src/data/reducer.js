@@ -16,36 +16,16 @@ const addPlayer = (state, action) => {
     }
 };
 
-// Fisher–Yates shuffle
-const shuffle = (array) => {
-
-    let newIndex;
-    let temporaryIndex;
-
-    for (let i = array.length - 1; i > 0; i =- 1) {
-
-        // generate new random index for the value
-        newIndex = Math.floor(Math.random() * (i + 1));
-
-        // swap the values between the indexes
-        temporaryIndex = array[i];
-        array[i] = array[newIndex];
-        array[newIndex] = temporaryIndex;
-    }
-
-    return array;
-};
-
-// suffle the playersPool
+// shuffle the players pool
 const shufflePlayers = (state) => {
     return {
         ...state,
-        playersPool: shuffle(state.playersPool),
+        playersPool: [...state.playersPool.sort(() => Math.random() - 0.5)]
     }
 }
 
 
-// geneerate the teams and store them in state
+// generate the teams and store them in state
 const generateTeams = (state) => {
 
     let firstHalf = state.playersPool.filter((_, index) => index < state.playersPool.length / 2);

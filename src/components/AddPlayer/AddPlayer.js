@@ -67,8 +67,11 @@ class AddPlayer extends Component {
                                     onChange={ this.handlePlayerSkillLevel }
                                     value={this.state.playerSkillLevel}
                                 >
+                                    { /* eslint-disable-next-line */ }
                                     <option>⭐</option>
+                                    { /* eslint-disable-next-line */ }
                                     <option>⭐⭐</option>
+                                    { /* eslint-disable-next-line */ }
                                     <option>⭐⭐⭐</option>
                                 </Form.Control>
                             </Form.Group>
