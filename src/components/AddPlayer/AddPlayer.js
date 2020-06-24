@@ -29,6 +29,7 @@ class AddPlayer extends Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.handleSubmit({ ...this.state });
+        this.setState({ playerName: "" });
     }
 
     render() {
@@ -40,6 +41,7 @@ class AddPlayer extends Component {
                             Player Name
                         </Form.Label>
                         <Form.Control
+                            required
                             type="text"
                             placeholder="Enter player's name"
                             onChange={ this.handlePlayerName }
@@ -55,9 +57,9 @@ class AddPlayer extends Component {
                             placeholder="Enter player's strength level"
                             onChange={ this.handlePlayerStrength }
                         >
-                            <option>&#11088;</option>
-                            <option>&#11088;&#11088;</option>
-                            <option>&#11088;&#11088;&#11088;</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
                         </Form.Control>
                     </Form.Group>
 
