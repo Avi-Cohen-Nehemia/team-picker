@@ -16,14 +16,10 @@ class CustomizeTeams extends Component {
         this.state = {
             teamAName: "Team A",
             teamBName: "Team B",
-            teamAColor: "blue",
-            teamBColor: "red"
         };
 
         this.handleTeamAName = this.handleTeamAName.bind(this);
         this.handleTeamBName = this.handleTeamBName.bind(this);
-        this.handleTeamAColor = this.handleTeamAColor.bind(this);
-        this.handleTeamBColor = this.handleTeamBColor.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -33,14 +29,6 @@ class CustomizeTeams extends Component {
 
     handleTeamBName(e) {
         this.setState({ teamBName: e.currentTarget.value });
-    }
-
-    handleTeamAColor(color, e) {
-        this.setState({ teamAColor: color.hex });
-    }
-
-    handleTeamBColor(color, e) {
-        this.setState({ teamBColor: color.hex });
     }
 
     handleSubmit(e) {
