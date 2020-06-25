@@ -61,7 +61,10 @@ class Kits extends Component {
                             alt="football-shirt"
                             width="50"
                             height="50"
-                            style={{ backgroundColor: this.state.selected === 1 ? this.state.color : null }}
+                            style={{ 
+                                backgroundColor: this.state.selected === 1 ? this.state.color : null,
+                                borderRadius: "5px"
+                             }}
                             onClick={ this.handleKit1 }
                         />
                         <img
@@ -69,7 +72,10 @@ class Kits extends Component {
                             alt="football-shirt"
                             width="50"
                             height="50"
-                            style={{ backgroundColor: this.state.selected === 2 ? this.state.color : null }}
+                            style={{ 
+                                backgroundColor: this.state.selected === 2 ? this.state.color : null,
+                                borderRadius: "5px"
+                             }}
                             onClick={ this.handleKit2 }
                         />
                         <img
@@ -77,7 +83,10 @@ class Kits extends Component {
                             alt="football-shirt"
                             width="50"
                             height="50"
-                            style={{ backgroundColor: this.state.selected === 3 ? this.state.color : null }}
+                            style={{ 
+                                backgroundColor: this.state.selected === 3 ? this.state.color : null,
+                                borderRadius: "5px"
+                             }}
                             onClick={ this.handleKit3 }
                         />
                     </div>
