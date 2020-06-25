@@ -5,7 +5,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Kits from "./../Kits/Kits";
+import TeamAKit from "../Kits/TeamAKit";
+import TeamBKit from "../Kits/TeamBKit";
 
 class CustomizeTeams extends Component {
 
@@ -14,16 +15,16 @@ class CustomizeTeams extends Component {
         super(props);
 
         this.state = {
-            teamAName: props.teamAName,
-            teamBName: props.teamBName,
-            teamAKit: props.teamAKit,
-            teamBKit: props.teamBKit,
-            teamAColor: props.teamAColor,
-            teamBColor: props.teamBColor
+            teamAName: "Team A",
+            teamBName: "Team B",
+            teamAColor: "blue",
+            teamBColor: "red"
         };
 
         this.handleTeamAName = this.handleTeamAName.bind(this);
         this.handleTeamBName = this.handleTeamBName.bind(this);
+        this.handleTeamAColor = this.handleTeamAColor.bind(this);
+        this.handleTeamBColor = this.handleTeamBColor.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -33,6 +34,14 @@ class CustomizeTeams extends Component {
 
     handleTeamBName(e) {
         this.setState({ teamBName: e.currentTarget.value });
+    }
+
+    handleTeamAColor(color, e) {
+        this.setState({ teamAColor: color.hex });
+    }
+
+    handleTeamBColor(color, e) {
+        this.setState({ teamBColor: color.hex });
     }
 
     handleSubmit(e) {
@@ -61,8 +70,8 @@ class CustomizeTeams extends Component {
                                 <Form.Control
                                     type="text"
                                     placeholder="Enter team's name"
-                                    onChange={ this.handleTeamBName }
-                                    value={this.state.teamBName}
+                                    onChange={ this.handleTeamAName }
+                                    value={this.state.teamAName}
                                     maxLength="20"
                                 />
                             </Form.Group>
@@ -70,13 +79,15 @@ class CustomizeTeams extends Component {
                                 <Form.Label style={{ color: "white" }}>
                                     <strong>Choose Kit</strong>
                                 </Form.Label>
-                                <Kits/>
+                                <TeamAKit/>
                             </Form.Group>
                             <Form.Group className="pt-4">
                                 <Form.Label style={{ color: "white" }}>
                                     <strong>Choose Colour</strong>
                                 </Form.Label>
-                                <CirclePicker/>
+                                <CirclePicker
+                                    onChangeComplete={ this.handleTeamAColor }
+                                />
                             </Form.Group>
                         </Jumbotron>
                     </Col>
@@ -106,13 +117,15 @@ class CustomizeTeams extends Component {
                                 <Form.Label style={{ color: "white" }}>
                                     <strong>Choose Kit</strong>
                                 </Form.Label>
-                                <Kits/>
+                                <TeamBKit/>
                             </Form.Group>
                             <Form.Group className="pt-4">
                                 <Form.Label style={{ color: "white" }}>
                                     <strong>Choose Colour</strong>
                                 </Form.Label>
-                                <CirclePicker/>
+                                <CirclePicker
+                                    onChangeComplete={ this.handleTeamBColor }
+                                />
                             </Form.Group>
                         </Jumbotron>
                     </Col>

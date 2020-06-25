@@ -44,10 +44,32 @@ const generateTeams = (state) => {
     }
 }
 
+const selectTeamAKit = (state, action) => {
+    return {
+        ...state,
+        teamA: {
+            ...state.teamA,
+            kit: action.teamA.kit
+        },
+    }
+}
+
+const selectTeamBKit = (state, action) => {
+    return {
+        ...state,
+        teamA: {
+            ...state.teamA,
+            kit: action.teamB.kit
+        },
+    }
+}
+
 const reducer = (state, action) => {
     switch (action.type) {
         case "ADD_PLAYER": return addPlayer(state, action);
         case "GENERATE_TEAMS": return generateTeams(shufflePlayers(state));
+        case "SELECT_TEAM_A_KIT": return selectTeamAKit(state, action);
+        case "SELECT_TEAM_B_KIT": return selectTeamBKit(state, action);
         case "RESET": return initialState;
         default: return state;
     }
