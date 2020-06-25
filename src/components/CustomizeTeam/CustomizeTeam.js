@@ -3,9 +3,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from "react-bootstrap/Form";
-import kit1 from './../../assets/images/kit1.png';
-import kit2 from './../../assets/images/kit2.png';
-import kit3 from './../../assets/images/kit3.png';
+import Kits from "./../Kits";
 
 class CustomizeTeams extends Component {
 
@@ -66,32 +64,7 @@ class CustomizeTeams extends Component {
                                 <Form.Label style={{ color: "white" }}>
                                     <strong>Choose Kit</strong>
                                 </Form.Label>
-                                <div 
-                                    className="d-flex justify-content-around align-items-center"
-                                    style={{
-                                        backgroundColor: "white",
-                                        borderRadius: "5px",
-                                        height: "4rem"
-                                    }}>
-                                    <img
-                                        src={ kit1 }
-                                        alt="football-shirt"
-                                        width="50"
-                                        height="50"
-                                    />
-                                    <img
-                                        src={ kit2 }
-                                        alt="football-shirt"
-                                        width="50"
-                                        height="50"
-                                    />
-                                    <img
-                                        src={ kit3 }
-                                        alt="football-shirt"
-                                        width="50"
-                                        height="50"
-                                    />
-                                </div>
+                                <Kits/>
                             </Form.Group>
                         </Jumbotron>
                     </Col>
@@ -116,6 +89,12 @@ class CustomizeTeams extends Component {
                                     value={this.state.teamBName}
                                     maxLength="20"
                                 />
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label style={{ color: "white" }}>
+                                    <strong>Choose Kit</strong>
+                                </Form.Label>
+                                <Kits/>
                             </Form.Group>
                         </Jumbotron>
                     </Col>
