@@ -11,8 +11,8 @@ class CustomizeTeams extends Component {
         super(props);
 
         this.state = {
-            teamAName: props.playerName,
-            teamBName: props.playerSkillLevel
+            teamAName: props.teamAName,
+            teamBName: props.teamBName
         };
 
         this.handleTeamAName = this.handleTeamAName.bind(this);
@@ -35,7 +35,7 @@ class CustomizeTeams extends Component {
 
     render() {
         return(
-            <Form className="justify-content-center d-flex align-items-center flex-column">
+            <Form>
                 <Row>
                     <Col>
                         <Jumbotron
@@ -44,22 +44,21 @@ class CustomizeTeams extends Component {
                                 top: "3rem",
                                 opacity: 0.7,
                                 backgroundColor: "black",
-                                color: "white"
+                                color: "white",
                             }}
                         >
-                                <Form.Group>
-                                    <Form.Label style={{ color: "white" }}>
-                                        <strong>Player Name</strong>
-                                    </Form.Label>
-                                    <Form.Control
-                                        required
-                                        type="text"
-                                        placeholder="Enter player's name"
-                                        onChange={ this.handlePlayerName }
-                                        value={this.state.playerName}
-                                        maxLength="20"
-                                    />
-                                </Form.Group>
+                            <Form.Group>
+                                <Form.Label style={{ color: "white" }}>
+                                    <strong>Team A Name</strong>
+                                </Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Enter team's name"
+                                    onChange={ this.handleTeamBName }
+                                    value={this.state.teamBName}
+                                    maxLength="20"
+                                />
+                            </Form.Group>
                         </Jumbotron>
                     </Col>
                     <Col>
@@ -71,7 +70,19 @@ class CustomizeTeams extends Component {
                                 backgroundColor: "black",
                                 color: "white"
                             }}
-                        >      
+                        >
+                            <Form.Group>
+                                <Form.Label style={{ color: "white" }}>
+                                    <strong>Team B Name</strong>
+                                </Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Enter team's name"
+                                    onChange={ this.handleTeamBName }
+                                    value={this.state.teamBName}
+                                    maxLength="20"
+                                />
+                            </Form.Group>
                         </Jumbotron>
                     </Col>
                 </Row>
