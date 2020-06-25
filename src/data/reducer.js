@@ -64,12 +64,34 @@ const selectTeamBKit = (state, action) => {
     }
 }
 
+const selectTeamAColor = (state, action) => {
+    return {
+        ...state,
+        teamA: {
+            ...state.teamA,
+            color: action.teamA.color
+        },
+    }
+}
+
+const selectTeamBColor = (state, action) => {
+    return {
+        ...state,
+        teamB: {
+            ...state.teamB,
+            color: action.teamB.color
+        },
+    }
+}
+
 const reducer = (state, action) => {
     switch (action.type) {
         case "ADD_PLAYER": return addPlayer(state, action);
         case "GENERATE_TEAMS": return generateTeams(shufflePlayers(state));
         case "SELECT_TEAM_A_KIT": return selectTeamAKit(state, action);
         case "SELECT_TEAM_B_KIT": return selectTeamBKit(state, action);
+        case "SELECT_TEAM_A_COLOR": return selectTeamAColor(state, action);
+        case "SELECT_TEAM_B_COLOR": return selectTeamBColor(state, action);
         case "RESET": return initialState;
         default: return state;
     }

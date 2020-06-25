@@ -32,6 +32,24 @@ export const selectTeamBKit = (data) => {
     }
 }
 
+export const selectTeamAColor = (data) => {
+    return {
+        type: "SELECT_TEAM_A_COLOR",
+        teamA: {
+            color: data.color,
+        } 
+    }
+}
+
+export const selectTeamBColor = (data) => {
+    return {
+        type: "SELECT_TEAM_B_COLOR",
+        teamB: {
+            color: data.color,
+        } 
+    }
+}
+
 export const reset = () => {
     return {
         type: "RESET",

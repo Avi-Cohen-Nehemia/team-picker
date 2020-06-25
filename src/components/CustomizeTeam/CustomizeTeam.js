@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { CirclePicker } from 'react-color';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -75,20 +74,7 @@ class CustomizeTeams extends Component {
                                     maxLength="20"
                                 />
                             </Form.Group>
-                            <Form.Group className="pt-4">
-                                <Form.Label style={{ color: "white" }}>
-                                    <strong>Choose Kit</strong>
-                                </Form.Label>
-                                <TeamAKit/>
-                            </Form.Group>
-                            <Form.Group className="pt-4">
-                                <Form.Label style={{ color: "white" }}>
-                                    <strong>Choose Colour</strong>
-                                </Form.Label>
-                                <CirclePicker
-                                    onChangeComplete={ this.handleTeamAColor }
-                                />
-                            </Form.Group>
+                            <TeamAKit/>
                         </Jumbotron>
                     </Col>
                     <Col>
@@ -113,20 +99,7 @@ class CustomizeTeams extends Component {
                                     maxLength="20"
                                 />
                             </Form.Group>
-                            <Form.Group className="pt-4">
-                                <Form.Label style={{ color: "white" }}>
-                                    <strong>Choose Kit</strong>
-                                </Form.Label>
-                                <TeamBKit/>
-                            </Form.Group>
-                            <Form.Group className="pt-4">
-                                <Form.Label style={{ color: "white" }}>
-                                    <strong>Choose Colour</strong>
-                                </Form.Label>
-                                <CirclePicker
-                                    onChangeComplete={ this.handleTeamBColor }
-                                />
-                            </Form.Group>
+                            <TeamBKit/>
                         </Jumbotron>
                     </Col>
                 </Row>
