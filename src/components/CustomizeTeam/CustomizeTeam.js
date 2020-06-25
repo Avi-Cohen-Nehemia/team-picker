@@ -15,7 +15,11 @@ class CustomizeTeams extends Component {
 
         this.state = {
             teamAName: props.teamAName,
-            teamBName: props.teamBName
+            teamBName: props.teamBName,
+            teamAKit: props.teamAKit,
+            teamBKit: props.teamBKit,
+            teamAColor: props.teamAColor,
+            teamBColor: props.teamBColor
         };
 
         this.handleTeamAName = this.handleTeamAName.bind(this);
@@ -62,13 +66,13 @@ class CustomizeTeams extends Component {
                                     maxLength="20"
                                 />
                             </Form.Group>
-                            <Form.Group>
+                            <Form.Group className="pt-4">
                                 <Form.Label style={{ color: "white" }}>
                                     <strong>Choose Kit</strong>
                                 </Form.Label>
                                 <Kits/>
                             </Form.Group>
-                            <Form.Group>
+                            <Form.Group className="pt-4">
                                 <Form.Label style={{ color: "white" }}>
                                     <strong>Choose Colour</strong>
                                 </Form.Label>
@@ -98,13 +102,13 @@ class CustomizeTeams extends Component {
                                     maxLength="20"
                                 />
                             </Form.Group>
-                            <Form.Group>
+                            <Form.Group className="pt-4">
                                 <Form.Label style={{ color: "white" }}>
                                     <strong>Choose Kit</strong>
                                 </Form.Label>
                                 <Kits/>
                             </Form.Group>
-                            <Form.Group>
+                            <Form.Group className="pt-4">
                                 <Form.Label style={{ color: "white" }}>
                                     <strong>Choose Colour</strong>
                                 </Form.Label>
@@ -113,12 +117,15 @@ class CustomizeTeams extends Component {
                         </Jumbotron>
                     </Col>
                 </Row>
-                <Button
-                    variant="success"
-                    type="submit"
-                >
-                    Start Playing!
-                </Button>
+                <Row className="d-flex justify-content-center mt-5">
+                    <Button
+                        size="lg"
+                        variant="success"
+                        type="submit"
+                    >
+                        Start Playing!
+                    </Button>
+                </Row>
             </Form>
         );
     }
