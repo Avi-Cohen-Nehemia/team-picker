@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { CirclePicker } from 'react-color';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -67,6 +68,12 @@ class CustomizeTeams extends Component {
                                 </Form.Label>
                                 <Kits/>
                             </Form.Group>
+                            <Form.Group>
+                                <Form.Label style={{ color: "white" }}>
+                                    <strong>Choose Colour</strong>
+                                </Form.Label>
+                                <CirclePicker/>
+                            </Form.Group>
                         </Jumbotron>
                     </Col>
                     <Col>
@@ -96,6 +103,12 @@ class CustomizeTeams extends Component {
                                     <strong>Choose Kit</strong>
                                 </Form.Label>
                                 <Kits/>
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label style={{ color: "white" }}>
+                                    <strong>Choose Colour</strong>
+                                </Form.Label>
+                                <CirclePicker/>
                             </Form.Group>
                         </Jumbotron>
                     </Col>
