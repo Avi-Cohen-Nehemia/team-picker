@@ -33,8 +33,12 @@ const generateTeams = (state) => {
 
     return {
         ...state,
-        teamA: firstHalf,
-        teamB: secondHalf,
+        teamA: {
+            players: [...firstHalf],
+        },
+        teamB: {
+            players: [...secondHalf],
+        }
     }
 }
 
