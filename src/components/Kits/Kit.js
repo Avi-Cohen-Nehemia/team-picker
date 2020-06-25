@@ -19,7 +19,7 @@ class Kits extends Component {
         this.handleKit1 = this.handleKit1.bind(this);
         this.handleKit2 = this.handleKit2.bind(this);
         this.handleKit3 = this.handleKit3.bind(this);
-        this.handleChange = this.handleChange.bind(this);
+        this.handleColorPicker = this.handleColorPicker.bind(this);
     }
 
     handleKit1() {
@@ -37,7 +37,7 @@ class Kits extends Component {
         this.props.handleKit({ ...this.state });
     }
 
-    handleChange(color) {
+    handleColorPicker(color) {
         this.setState({ color: color.hex })
         this.props.handleColor({ ...this.state });
     };
@@ -87,7 +87,7 @@ class Kits extends Component {
                         <strong>Choose Colour</strong>
                     </Form.Label>
                     <CirclePicker
-                        onChange={ this.handleChange }
+                        onChange={ this.handleColorPicker }
                     />
                 </Form.Group>
             </>
