@@ -44,9 +44,11 @@ const App = () => (
                 <TeamTable/>
                 <Row className="mt-4">
                     <Col className="justify-content-center d-flex">
-                        <Button variant="success">
-                            Confirm Teams
-                        </Button>
+                        <Link to="/customize-teams">
+                            <Button variant="success">
+                                Confirm Teams
+                            </Button>
+                        </Link>
                     </Col>
                     <Col className="justify-content-center d-flex">
                         <GenerateTeams

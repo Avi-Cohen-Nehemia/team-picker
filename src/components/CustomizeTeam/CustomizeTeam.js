@@ -35,37 +35,47 @@ class CustomizeTeams extends Component {
 
     render() {
         return(
-            <Row>
-                <Col>
-                    <Jumbotron
-                        style={{
-                            position: "relative",
-                            top: "3rem",
-                            opacity: 0.7,
-                            backgroundColor: "black",
-                            color: "white"
-                        }}
-                    >
-                        <Form className="justify-content-center d-flex align-items-center flex-column">
-
-                        </Form>
-                    </Jumbotron>
-                </Col>
-                <Col>
-                    <Jumbotron
-                        style={{
-                            position: "relative",
-                            top: "3rem",
-                            opacity: 0.7,
-                            backgroundColor: "black",
-                            color: "white"
-                        }}
-                    >
-                        <Form className="justify-content-center d-flex align-items-center flex-column">
-                        </Form>
-                    </Jumbotron>
-                </Col>
-            </Row>
+            <Form className="justify-content-center d-flex align-items-center flex-column">
+                <Row>
+                    <Col>
+                        <Jumbotron
+                            style={{
+                                position: "relative",
+                                top: "3rem",
+                                opacity: 0.7,
+                                backgroundColor: "black",
+                                color: "white"
+                            }}
+                        >
+                                <Form.Group>
+                                    <Form.Label style={{ color: "white" }}>
+                                        <strong>Player Name</strong>
+                                    </Form.Label>
+                                    <Form.Control
+                                        required
+                                        type="text"
+                                        placeholder="Enter player's name"
+                                        onChange={ this.handlePlayerName }
+                                        value={this.state.playerName}
+                                        maxLength="20"
+                                    />
+                                </Form.Group>
+                        </Jumbotron>
+                    </Col>
+                    <Col>
+                        <Jumbotron
+                            style={{
+                                position: "relative",
+                                top: "3rem",
+                                opacity: 0.7,
+                                backgroundColor: "black",
+                                color: "white"
+                            }}
+                        >      
+                        </Jumbotron>
+                    </Col>
+                </Row>
+            </Form>
         );
     }
 }
