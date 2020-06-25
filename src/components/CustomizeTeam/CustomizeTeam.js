@@ -3,6 +3,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 import Kits from "./../Kits/Kits";
 
 class CustomizeTeams extends Component {
@@ -22,11 +23,11 @@ class CustomizeTeams extends Component {
     }
 
     handleTeamAName(e) {
-        this.setState({ playerName: e.currentTarget.value });
+        this.setState({ teamAName: e.currentTarget.value });
     }
 
     handleTeamBName(e) {
-        this.setState({ playerSkillLevel: e.currentTarget.value });
+        this.setState({ teamBName: e.currentTarget.value });
     }
 
     handleSubmit(e) {
@@ -36,7 +37,7 @@ class CustomizeTeams extends Component {
 
     render() {
         return(
-            <Form>
+            <Form onSubmit={ this.handleSubmit }>
                 <Row>
                     <Col>
                         <Jumbotron
@@ -99,6 +100,12 @@ class CustomizeTeams extends Component {
                         </Jumbotron>
                     </Col>
                 </Row>
+                <Button
+                    variant="success"
+                    type="submit"
+                >
+                    Start Playing!
+                </Button>
             </Form>
         );
     }

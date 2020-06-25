@@ -3,13 +3,13 @@ export const initialState = {
     teamA: {
         players: [],
         name: "Team A",
-        kit: null,
+        kit: 1,
         totalSkillLevel: 0
     },
     teamB: {
         players: [],
         name: "Team B",
-        kit: null,
+        kit: 1,
         totalSkillLevel: 0
     },
 };
