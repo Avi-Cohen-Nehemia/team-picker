@@ -3,7 +3,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from "react-bootstrap/Form";
-import Kits from "./../Kits";
+import Kits from "./../Kits/Kits";
 
 class CustomizeTeams extends Component {
 

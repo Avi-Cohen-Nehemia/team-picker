@@ -14,6 +14,12 @@ export const generateTeams = () => {
     }
 }
 
+export const selectKit = () => {
+    return {
+        type: "SELECT_KIT",
+    }
+}
+
 export const reset = () => {
     return {
         type: "RESET",
