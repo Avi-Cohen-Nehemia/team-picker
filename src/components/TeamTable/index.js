@@ -3,8 +3,8 @@ import TeamTable from "./TeamTable";
 
 const mapStateToProps = (state) => {
     return {
-        teamA: state.teamA,
-        teamB: state.teamB
+        teamA: state.teamA.players,
+        teamB: state.teamB.players
     };
 };
 

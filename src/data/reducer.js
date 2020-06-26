@@ -33,8 +33,68 @@ const generateTeams = (state) => {
 
     return {
         ...state,
-        teamA: firstHalf,
-        teamB: secondHalf,
+        teamA: {
+            ...state.teamA,
+            players: [...firstHalf],
+        },
+        teamB: {
+            ...state.teamB,
+            players: [...secondHalf],
+        }
+    }
+}
+
+const selectTeamAKit = (state, action) => {
+    return {
+        ...state,
+        teamA: {
+            ...state.teamA,
+            kit: action.teamA.kit
+        },
+    }
+}
+
+const selectTeamBKit = (state, action) => {
+    return {
+        ...state,
+        teamB: {
+            ...state.teamB,
+            kit: action.teamB.kit
+        },
+    }
+}
+
+const selectTeamAColor = (state, action) => {
+    return {
+        ...state,
+        teamA: {
+            ...state.teamA,
+            color: action.teamA.color
+        },
+    }
+}
+
+const selectTeamBColor = (state, action) => {
+    return {
+        ...state,
+        teamB: {
+            ...state.teamB,
+            color: action.teamB.color
+        },
+    }
+}
+
+const setTeamsNames = (state, action) => {
+    return {
+        ...state,
+        teamA: {
+            ...state.teamA,
+            name: action.teamA.name
+        },
+        teamB: {
+            ...state.teamB,
+            name: action.teamB.name
+        },
     }
 }
 
@@ -42,6 +102,11 @@ const reducer = (state, action) => {
     switch (action.type) {
         case "ADD_PLAYER": return addPlayer(state, action);
         case "GENERATE_TEAMS": return generateTeams(shufflePlayers(state));
+        case "SELECT_TEAM_A_KIT": return selectTeamAKit(state, action);
+        case "SELECT_TEAM_B_KIT": return selectTeamBKit(state, action);
+        case "SELECT_TEAM_A_COLOR": return selectTeamAColor(state, action);
+        case "SELECT_TEAM_B_COLOR": return selectTeamBColor(state, action);
+        case "SET_TEAMS_NAMES": return setTeamsNames(state, action);
         case "RESET": return initialState;
         default: return state;
     }
