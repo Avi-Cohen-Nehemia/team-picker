@@ -1,23 +1,17 @@
-import React from "react";
-import footballPitch from './../../assets/images/footballPitch.jpg';
+import { connect } from "react-redux";
+import FootballPitch from "./FootballPitch";
 
-const FootballPitch = () => (
-    <>
-        <div
-            className="d-flex justify-content-center align-items-center"
-        >
-            <img
-                src={ footballPitch }
-                alt="football pitch"
-                style={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)"
-                }}
-            />
-        </div>
-    </>
-);
+const mapStateToProps = (state) => {
+    return {
+        teamAPlayers: state.teamA.players,
+        teamBPlayers: state.teamB.players,
+        teamAName: state.teamA.name,
+        teamBName: state.teamB.name,
+        teamAKit: state.teamA.kit,
+        teamBKit: state.teamB.kit,
+        teamAColor: state.teamA.color,
+        teamBColor: state.teamB.color,
+    };
+};
 
-export default FootballPitch;
+export default connect(mapStateToProps)(FootballPitch);
