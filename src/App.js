@@ -65,11 +65,13 @@ const App = () => (
                 </Row>
             </Container>
         </Route>
+
         <Route exact path="/customize-teams">
             <Container>
                 <CustomizeTeams/>
             </Container>
         </Route>
+        
         <Route exact path="/football-pitch" component={ FootballPitch }/>
     </Router>
 );
