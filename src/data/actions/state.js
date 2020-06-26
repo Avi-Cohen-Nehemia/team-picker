@@ -62,8 +62,26 @@ export const setTeamsNames = (data) => {
     }
 }
 
-export const reset = () => {
+export const incrementTeamAScore = () => {
     return {
-        type: "RESET",
+        type: "INCREMENT_TEAM_A_SCORE",
+    }
+}
+
+export const incrementTeamBScore = () => {
+    return {
+        type: "INCREMENT_TEAM_B_SCORE",
+    }
+}
+
+export const resetScore = () => {
+    return {
+        type: "RESET_SCORE",
+    }
+}
+
+export const resetGame = () => {
+    return {
+        type: "RESET_GAME",
     }
 }

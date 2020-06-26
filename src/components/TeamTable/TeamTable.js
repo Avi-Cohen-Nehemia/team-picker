@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 const TeamTable = ({ teamA, teamB }) => (
-    <Row className="pt-5">
+    <Row style={{ paddingTop: "15%" }}>
         <Col>
             <Card className="text-center">
                 <Card.Header>Team A</Card.Header>
