@@ -9,10 +9,10 @@ import kit2 from './../../assets/images/kit2.png';
 import kit3 from './../../assets/images/kit3.png';
 
 const FootballPitch = ({
-    teamAPlayers,
-    teamBPlayers,
-    teamAName, teamBName,
-    teamAKit, teamBKit,
+    teamAName,
+    teamBName,
+    teamAKit,
+    teamBKit,
     teamAColor,
     teamBColor,
     teamAScore,
