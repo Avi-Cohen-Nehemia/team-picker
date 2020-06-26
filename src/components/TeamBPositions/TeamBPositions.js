@@ -1,95 +1,96 @@
 import React from "react";
 import PlayerIcon from "../PlayerIcon";
 
-const TeamAPositions = ({ teamAPlayers, teamAColor, teamAKit }) => (
+const TeamBPositions = ({ teamBPlayers, teamBColor, teamBKit }) => (
     <div>
         <div
             style={{
                 position: "absolute",
                 top: "47%",
-                left: "30%"
+                right: "30%"
             }}
         >
             <PlayerIcon
-                playerName={ teamAPlayers[0].name }
-                teamColor={ teamAColor }
-                teamKit={ teamAKit }
+                playerName={ teamBPlayers[0].name }
+                teamColor={ teamBColor }
+                teamKit={ teamBKit }
             />
         </div>
         <div
             style={{
                 position: "absolute",
                 top: "30%",
-                left: "38%"
+                right: "38%"
             }}
         >
             <PlayerIcon
-                playerName={ teamAPlayers[1].name }
-                teamColor={ teamAColor }
-                teamKit={ teamAKit }
+                playerName={ teamBPlayers[1].name }
+                teamColor={ teamBColor }
+                teamKit={ teamBKit }
             />
         </div>
         <div
             style={{
                 position: "absolute",
                 top: "64%",
-                left: "38%"
+                right: "38%"
             }}
         >
             <PlayerIcon
-                playerName={ teamAPlayers[2].name }
-                teamColor={ teamAColor }
-                teamKit={ teamAKit }
+                playerName={ teamBPlayers[2].name }
+                teamColor={ teamBColor }
+                teamKit={ teamBKit }
             />
         </div>
-        { teamAPlayers.length >= 4 ?
+        
+        { teamBPlayers.length >= 4 ?
             <div
                 style={{
                     position: "absolute",
                     top: "47%",
-                    left: "38%"
+                    right: "38%"
                 }}
             >
                 <PlayerIcon
-                    playerName={ teamAPlayers[3].name }
-                    teamColor={ teamAColor }
-                    teamKit={ teamAKit }
+                    playerName={ teamBPlayers[3].name }
+                    teamColor={ teamBColor }
+                    teamKit={ teamBKit }
                 />
             </div>
         : null }
 
-        { teamAPlayers.length >= 5 ?
+        { teamBPlayers.length >= 5 ?
             <div
                 style={{
                     position: "absolute",
                     top: "37%",
-                    left: "44%"
+                    right: "44%"
                 }}
             >
                 <PlayerIcon
-                    playerName={ teamAPlayers[3].name }
-                    teamColor={ teamAColor }
-                    teamKit={ teamAKit }
+                    playerName={ teamBPlayers[3].name }
+                    teamColor={ teamBColor }
+                    teamKit={ teamBKit }
                 />
             </div>
         : null }
 
-        { teamAPlayers.length === 6 ?
+        { teamBPlayers.length === 6 ?
             <div
                 style={{
                     position: "absolute",
                     top: "57%",
-                    left: "44%"
+                    right: "44%"
                 }}
             >
                 <PlayerIcon
-                    playerName={ teamAPlayers[3].name }
-                    teamColor={ teamAColor }
-                    teamKit={ teamAKit }
+                    playerName={ teamBPlayers[3].name }
+                    teamColor={ teamBColor }
+                    teamKit={ teamBKit }
                 />
             </div>
         : null }
     </div>
 );
 
-export default TeamAPositions;
+export default TeamBPositions;

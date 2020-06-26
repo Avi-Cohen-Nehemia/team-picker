@@ -15,7 +15,6 @@ import AlertMessage from './components/AlertMessage';
 import Button from 'react-bootstrap/Button';
 import CustomizeTeams from './components/CustomizeTeam';
 import FootballPitch from './components/FootballPitch';
-import TeamAPositions from './components/TeamAPositions';
 
 const App = () => (
     <Router history={ history }>
@@ -76,7 +75,6 @@ const App = () => (
         <Route exact path="/football-pitch">
             <FootballPitch/>
         </Route>
-        <Route exact path="/positions" component={ TeamAPositions }/>
     </Router>
 );
 
