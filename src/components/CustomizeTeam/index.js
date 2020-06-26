@@ -6,7 +6,7 @@ import { setTeamsNames } from "../../data/actions/state";
 const mapStateToProps = (state) => {
     return {
         teamAName: state.teamA.name,
-        teamBName: state.teamA.name
+        teamBName: state.teamB.name
     };
 };
 

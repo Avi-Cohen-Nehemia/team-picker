@@ -57,8 +57,8 @@ const selectTeamAKit = (state, action) => {
 const selectTeamBKit = (state, action) => {
     return {
         ...state,
-        teamA: {
-            ...state.teamA,
+        teamB: {
+            ...state.teamB,
             kit: action.teamB.kit
         },
     }
