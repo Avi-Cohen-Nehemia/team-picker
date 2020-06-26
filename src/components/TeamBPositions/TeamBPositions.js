@@ -6,7 +6,7 @@ const TeamBPositions = ({ teamBPlayers, teamBColor, teamBKit }) => (
         <div
             style={{
                 position: "absolute",
-                top: "45%",
+                top: "41%",
                 right: "23%"
             }}
         >
@@ -14,12 +14,13 @@ const TeamBPositions = ({ teamBPlayers, teamBColor, teamBKit }) => (
                 playerName={ teamBPlayers[0].name }
                 teamColor={ teamBColor }
                 teamKit={ teamBKit }
+                playerSkillLevel={ teamBPlayers[0].skillLevel }
             />
         </div>
         <div
             style={{
                 position: "absolute",
-                top: "20%",
+                top: "16%",
                 right: "32%"
             }}
         >
@@ -27,12 +28,13 @@ const TeamBPositions = ({ teamBPlayers, teamBColor, teamBKit }) => (
                 playerName={ teamBPlayers[1].name }
                 teamColor={ teamBColor }
                 teamKit={ teamBKit }
+                playerSkillLevel={ teamBPlayers[1].skillLevel }
             />
         </div>
         <div
             style={{
                 position: "absolute",
-                top: "70%",
+                top: "66%",
                 right: "32%"
             }}
         >
@@ -40,6 +42,7 @@ const TeamBPositions = ({ teamBPlayers, teamBColor, teamBKit }) => (
                 playerName={ teamBPlayers[2].name }
                 teamColor={ teamBColor }
                 teamKit={ teamBKit }
+                playerSkillLevel={ teamBPlayers[2].skillLevel }
             />
         </div>
 
@@ -47,7 +50,7 @@ const TeamBPositions = ({ teamBPlayers, teamBColor, teamBKit }) => (
             <div
                 style={{
                     position: "absolute",
-                    top: "45%",
+                    top: "41%",
                     right: "32%"
                 }}
             >
@@ -55,6 +58,7 @@ const TeamBPositions = ({ teamBPlayers, teamBColor, teamBKit }) => (
                     playerName={ teamBPlayers[3].name }
                     teamColor={ teamBColor }
                     teamKit={ teamBKit }
+                    playerSkillLevel={ teamBPlayers[3].skillLevel }
                 />
             </div>
         : null }
@@ -63,14 +67,15 @@ const TeamBPositions = ({ teamBPlayers, teamBColor, teamBKit }) => (
             <div
                 style={{
                     position: "absolute",
-                    top: "34%",
+                    top: "30%",
                     right: "40%"
                 }}
             >
                 <PlayerIcon
-                    playerName={ teamBPlayers[3].name }
+                    playerName={ teamBPlayers[4].name }
                     teamColor={ teamBColor }
                     teamKit={ teamBKit }
+                    playerSkillLevel={ teamBPlayers[4].skillLevel }
                 />
             </div>
         : null }
@@ -79,14 +84,15 @@ const TeamBPositions = ({ teamBPlayers, teamBColor, teamBKit }) => (
             <div
                 style={{
                     position: "absolute",
-                    top: "58%",
+                    top: "54%",
                     right: "40%"
                 }}
             >
                 <PlayerIcon
-                    playerName={ teamBPlayers[3].name }
+                    playerName={ teamBPlayers[5].name }
                     teamColor={ teamBColor }
                     teamKit={ teamBKit }
+                    playerSkillLevel={ teamBPlayers[5].skillLevel }
                 />
             </div>
         : null }

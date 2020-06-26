@@ -6,7 +6,7 @@ const TeamAPositions = ({ teamAPlayers, teamAColor, teamAKit }) => (
         <div
             style={{
                 position: "absolute",
-                top: "45%",
+                top: "41%",
                 left: "23%"
             }}
         >
@@ -14,12 +14,13 @@ const TeamAPositions = ({ teamAPlayers, teamAColor, teamAKit }) => (
                 playerName={ teamAPlayers[0].name }
                 teamColor={ teamAColor }
                 teamKit={ teamAKit }
+                playerSkillLevel={ teamAPlayers[0].skillLevel }
             />
         </div>
         <div
             style={{
                 position: "absolute",
-                top: "20%",
+                top: "16%",
                 left: "32%"
             }}
         >
@@ -27,12 +28,13 @@ const TeamAPositions = ({ teamAPlayers, teamAColor, teamAKit }) => (
                 playerName={ teamAPlayers[1].name }
                 teamColor={ teamAColor }
                 teamKit={ teamAKit }
+                playerSkillLevel={ teamAPlayers[1].skillLevel }
             />
         </div>
         <div
             style={{
                 position: "absolute",
-                top: "70%",
+                top: "66%",
                 left: "32%"
             }}
         >
@@ -40,13 +42,14 @@ const TeamAPositions = ({ teamAPlayers, teamAColor, teamAKit }) => (
                 playerName={ teamAPlayers[2].name }
                 teamColor={ teamAColor }
                 teamKit={ teamAKit }
+                playerSkillLevel={ teamAPlayers[2].skillLevel }
             />
         </div>
         { teamAPlayers.length >= 4 ?
             <div
                 style={{
                     position: "absolute",
-                    top: "45%",
+                    top: "41%",
                     left: "32%"
                 }}
             >
@@ -54,6 +57,7 @@ const TeamAPositions = ({ teamAPlayers, teamAColor, teamAKit }) => (
                     playerName={ teamAPlayers[3].name }
                     teamColor={ teamAColor }
                     teamKit={ teamAKit }
+                    playerSkillLevel={ teamAPlayers[3].skillLevel }
                 />
             </div>
         : null }
@@ -62,14 +66,15 @@ const TeamAPositions = ({ teamAPlayers, teamAColor, teamAKit }) => (
             <div
                 style={{
                     position: "absolute",
-                    top: "34%",
+                    top: "30%",
                     left: "40%"
                 }}
             >
                 <PlayerIcon
-                    playerName={ teamAPlayers[3].name }
+                    playerName={ teamAPlayers[4].name }
                     teamColor={ teamAColor }
                     teamKit={ teamAKit }
+                    playerSkillLevel={ teamAPlayers[4].skillLevel }
                 />
             </div>
         : null }
@@ -78,14 +83,15 @@ const TeamAPositions = ({ teamAPlayers, teamAColor, teamAKit }) => (
             <div
                 style={{
                     position: "absolute",
-                    top: "58%",
+                    top: "54%",
                     left: "40%"
                 }}
             >
                 <PlayerIcon
-                    playerName={ teamAPlayers[3].name }
+                    playerName={ teamAPlayers[5].name }
                     teamColor={ teamAColor }
                     teamKit={ teamAKit }
+                    playerSkillLevel={ teamAPlayers[5].skillLevel }
                 />
             </div>
         : null }
