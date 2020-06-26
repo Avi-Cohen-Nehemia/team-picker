@@ -98,6 +98,40 @@ const setTeamsNames = (state, action) => {
     }
 }
 
+const incrementTeamAScore = (state) => {
+    return {
+    ...state,
+        teamA: {
+            ...state.teamA,
+            score: +state.teamA.score + 1
+        },
+    }
+}
+
+const incrementTeamBScore = (state) => {
+    return {
+    ...state,
+        teamB: {
+            ...state.teamB,
+            score: +state.teamB.score + 1
+        },
+    }
+}
+
+const resetScore = (state) => {
+    return {
+    ...state,
+        teamA: {
+            ...state.teamA,
+            score: 0
+        },
+        teamB: {
+            ...state.teamB,
+            score: 0
+        },
+    }
+}
+
 const reducer = (state, action) => {
     switch (action.type) {
         case "ADD_PLAYER": return addPlayer(state, action);
@@ -107,7 +141,10 @@ const reducer = (state, action) => {
         case "SELECT_TEAM_A_COLOR": return selectTeamAColor(state, action);
         case "SELECT_TEAM_B_COLOR": return selectTeamBColor(state, action);
         case "SET_TEAMS_NAMES": return setTeamsNames(state, action);
-        case "RESET": return initialState;
+        case "INCREMENT_TEAM_A_SCORE": return incrementTeamAScore(state);
+        case "INCREMENT_TEAM_B_SCORE": return incrementTeamBScore(state);
+        case "RESET_SCORE": return resetScore(state);
+        case "RESET_GAME": return initialState;
         default: return state;
     }
 };

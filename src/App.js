@@ -71,8 +71,10 @@ const App = () => (
                 <CustomizeTeams/>
             </Container>
         </Route>
-        
-        <Route exact path="/football-pitch" component={ FootballPitch }/>
+
+        <Route exact path="/football-pitch">
+            <FootballPitch/>
+        </Route>
     </Router>
 );
 
