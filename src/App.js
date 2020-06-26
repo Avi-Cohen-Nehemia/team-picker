@@ -14,6 +14,7 @@ import Col from "react-bootstrap/Col";
 import AlertMessage from './components/AlertMessage';
 import Button from 'react-bootstrap/Button';
 import CustomizeTeams from './components/CustomizeTeam';
+import FootballPitch from './components/FootballPitch';
 
 const App = () => (
     <Router history={ history }>
@@ -69,6 +70,7 @@ const App = () => (
                 <CustomizeTeams/>
             </Container>
         </Route>
+        <Route exact path="/football-pitch" component={ FootballPitch }/>
     </Router>
 );
 
