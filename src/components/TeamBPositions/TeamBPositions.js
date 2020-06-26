@@ -6,8 +6,8 @@ const TeamBPositions = ({ teamBPlayers, teamBColor, teamBKit }) => (
         <div
             style={{
                 position: "absolute",
-                top: "47%",
-                right: "30%"
+                top: "45%",
+                right: "23%"
             }}
         >
             <PlayerIcon
@@ -19,8 +19,8 @@ const TeamBPositions = ({ teamBPlayers, teamBColor, teamBKit }) => (
         <div
             style={{
                 position: "absolute",
-                top: "30%",
-                right: "38%"
+                top: "20%",
+                right: "32%"
             }}
         >
             <PlayerIcon
@@ -32,8 +32,8 @@ const TeamBPositions = ({ teamBPlayers, teamBColor, teamBKit }) => (
         <div
             style={{
                 position: "absolute",
-                top: "64%",
-                right: "38%"
+                top: "70%",
+                right: "32%"
             }}
         >
             <PlayerIcon
@@ -42,13 +42,13 @@ const TeamBPositions = ({ teamBPlayers, teamBColor, teamBKit }) => (
                 teamKit={ teamBKit }
             />
         </div>
-        
+
         { teamBPlayers.length >= 4 ?
             <div
                 style={{
                     position: "absolute",
-                    top: "47%",
-                    right: "38%"
+                    top: "45%",
+                    right: "32%"
                 }}
             >
                 <PlayerIcon
@@ -63,8 +63,8 @@ const TeamBPositions = ({ teamBPlayers, teamBColor, teamBKit }) => (
             <div
                 style={{
                     position: "absolute",
-                    top: "37%",
-                    right: "44%"
+                    top: "34%",
+                    right: "40%"
                 }}
             >
                 <PlayerIcon
@@ -79,8 +79,8 @@ const TeamBPositions = ({ teamBPlayers, teamBColor, teamBKit }) => (
             <div
                 style={{
                     position: "absolute",
-                    top: "57%",
-                    right: "44%"
+                    top: "58%",
+                    right: "40%"
                 }}
             >
                 <PlayerIcon

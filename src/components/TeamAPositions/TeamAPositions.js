@@ -6,8 +6,8 @@ const TeamAPositions = ({ teamAPlayers, teamAColor, teamAKit }) => (
         <div
             style={{
                 position: "absolute",
-                top: "47%",
-                left: "30%"
+                top: "45%",
+                left: "23%"
             }}
         >
             <PlayerIcon
@@ -19,8 +19,8 @@ const TeamAPositions = ({ teamAPlayers, teamAColor, teamAKit }) => (
         <div
             style={{
                 position: "absolute",
-                top: "30%",
-                left: "38%"
+                top: "20%",
+                left: "32%"
             }}
         >
             <PlayerIcon
@@ -32,8 +32,8 @@ const TeamAPositions = ({ teamAPlayers, teamAColor, teamAKit }) => (
         <div
             style={{
                 position: "absolute",
-                top: "64%",
-                left: "38%"
+                top: "70%",
+                left: "32%"
             }}
         >
             <PlayerIcon
@@ -46,8 +46,8 @@ const TeamAPositions = ({ teamAPlayers, teamAColor, teamAKit }) => (
             <div
                 style={{
                     position: "absolute",
-                    top: "47%",
-                    left: "38%"
+                    top: "45%",
+                    left: "32%"
                 }}
             >
                 <PlayerIcon
@@ -62,8 +62,8 @@ const TeamAPositions = ({ teamAPlayers, teamAColor, teamAKit }) => (
             <div
                 style={{
                     position: "absolute",
-                    top: "37%",
-                    left: "44%"
+                    top: "34%",
+                    left: "40%"
                 }}
             >
                 <PlayerIcon
@@ -78,8 +78,8 @@ const TeamAPositions = ({ teamAPlayers, teamAColor, teamAKit }) => (
             <div
                 style={{
                     position: "absolute",
-                    top: "57%",
-                    left: "44%"
+                    top: "58%",
+                    left: "40%"
                 }}
             >
                 <PlayerIcon

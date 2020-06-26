@@ -31,8 +31,8 @@ const FootballPitch = ({
                 left: "50%",
                 transform: "translate(-50%, -50%)",
                 zIndex: "2",
-                height: "100%",
-                width: "100%"
+                height: "70%",
+                width: "70%"
             }}
         >
             <TeamAPositions/>
