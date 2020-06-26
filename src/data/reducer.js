@@ -44,6 +44,29 @@ const generateTeams = (state) => {
     }
 }
 
+const totalSkillLevel = (state) => {
+    
+    let teamASkill = state.teamA.players.reduce((acc, player) => {
+        return acc + player.skillLevel.length
+    }, 0)
+
+    let teamBSkill = state.teamB.players.reduce((acc, player) => {
+        return acc + player.skillLevel.length
+    }, 0)
+
+    return {
+        ...state,
+        teamA: {
+            ...state.teamA,
+            totalSkillLevel: teamASkill,
+        },
+        teamB: {
+            ...state.teamB,
+            totalSkillLevel: teamBSkill,
+        }
+    }
+}
+
 const selectTeamAKit = (state, action) => {
     return {
         ...state,
@@ -135,7 +158,7 @@ const resetScore = (state) => {
 const reducer = (state, action) => {
     switch (action.type) {
         case "ADD_PLAYER": return addPlayer(state, action);
-        case "GENERATE_TEAMS": return generateTeams(shufflePlayers(state));
+        case "GENERATE_TEAMS": return totalSkillLevel(generateTeams(shufflePlayers(state)));
         case "SELECT_TEAM_A_KIT": return selectTeamAKit(state, action);
         case "SELECT_TEAM_B_KIT": return selectTeamBKit(state, action);
         case "SELECT_TEAM_A_COLOR": return selectTeamAColor(state, action);
