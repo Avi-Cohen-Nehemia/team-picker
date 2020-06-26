@@ -13,12 +13,9 @@ const Home = () => (
             color: "white"
         }}
     >
-        <div className="justify-content-center d-flex align-items-center flex-column">
-            <h1>
-                <img src={ logo } alt="football" width="130" height="130"/>
-                Welcome to Football Team Generator!
-                <img src={ logo } alt="football" width="130" height="130"/>
-            </h1>
+        <div className="justify-content-center d-flex align-items-center flex-column text-center">
+            <h1>Welcome to Football Team Generator!</h1>
+            <img src={ logo } alt="football" width="130" height="130"/>
             <h5 className="mb-5">
                 <span role="img" aria-label="man-running">🏃‍♂️</span> Create players and split them randomly into 2 groups
             </h5>
