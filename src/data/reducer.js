@@ -44,6 +44,7 @@ const generateTeams = (state) => {
     }
 }
 
+// calculate the teams total skill level
 const totalSkillLevel = (state) => {
     
     let teamASkill = state.teamA.players.reduce((acc, player) => {
