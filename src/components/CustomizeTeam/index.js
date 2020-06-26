@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import CustomizeTeams from "./CustomizeTeam";
+import history from "../../history";
 
 import { setTeamsNames } from "../../data/actions/state";
 
@@ -12,7 +13,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleSubmit: (data) => dispatch(setTeamsNames(data)),
+        handleSubmit: (data) => {
+            dispatch(setTeamsNames(data));
+            history.push("/football-pitch");
+        }
     }
 }
 
