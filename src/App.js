@@ -13,7 +13,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import AlertMessage from './components/AlertMessage';
 import Button from 'react-bootstrap/Button';
-import CustomizeTeams from './components/CustomizeTeam/CustomizeTeam';
+import CustomizeTeams from './components/CustomizeTeam';
 
 const App = () => (
     <Router history={ history }>

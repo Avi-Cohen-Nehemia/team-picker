@@ -14,8 +14,8 @@ class CustomizeTeams extends Component {
         super(props);
 
         this.state = {
-            teamAName: "Team A",
-            teamBName: "Team B",
+            teamAName: props.teamAName,
+            teamBName: props.teamBName,
         };
 
         this.handleTeamAName = this.handleTeamAName.bind(this);

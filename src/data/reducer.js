@@ -84,6 +84,20 @@ const selectTeamBColor = (state, action) => {
     }
 }
 
+const setTeamsNames = (state, action) => {
+    return {
+        ...state,
+        teamA: {
+            ...state.teamA,
+            name: action.teamA.name
+        },
+        teamB: {
+            ...state.teamB,
+            name: action.teamB.name
+        },
+    }
+}
+
 const reducer = (state, action) => {
     switch (action.type) {
         case "ADD_PLAYER": return addPlayer(state, action);
@@ -92,6 +106,7 @@ const reducer = (state, action) => {
         case "SELECT_TEAM_B_KIT": return selectTeamBKit(state, action);
         case "SELECT_TEAM_A_COLOR": return selectTeamAColor(state, action);
         case "SELECT_TEAM_B_COLOR": return selectTeamBColor(state, action);
+        case "SET_TEAMS_NAMES": return setTeamsNames(state, action);
         case "RESET": return initialState;
         default: return state;
     }

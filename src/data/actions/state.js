@@ -50,6 +50,18 @@ export const selectTeamBColor = (data) => {
     }
 }
 
+export const setTeamsNames = (data) => {
+    return {
+        type: "SET_TEAMS_NAMES",
+        teamA: {
+            name: data.teamAName
+        },
+        teamB: {
+            name: data.teamBName
+        } 
+    }
+}
+
 export const reset = () => {
     return {
         type: "RESET",
