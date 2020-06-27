@@ -1,6 +1,7 @@
 import React from "react";
 import PlayerIcon from "../PlayerIcon";
 
+// import styling
 import "./../../assets/css/players-positions.css"
 
 // component to determine poistions on the pitch-page

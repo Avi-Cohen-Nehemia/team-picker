@@ -1,8 +1,10 @@
 import React from "react";
+
+//import styling and images
 import "./../../assets/css/kits.css"
-import kit1 from './../../assets/images/kit1.png';
-import kit2 from './../../assets/images/kit2.png';
-import kit3 from './../../assets/images/kit3.png';
+import kit1 from "./../../assets/images/kit1.png";
+import kit2 from "./../../assets/images/kit2.png";
+import kit3 from "./../../assets/images/kit3.png";
 
 const PlayerIcon = ({ playerName, teamColor, teamKit, playerSkillLevel }) => (
     <span className="d-flex justify-content-center align-items-center flex-column">

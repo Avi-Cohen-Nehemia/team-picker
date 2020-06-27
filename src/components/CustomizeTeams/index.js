@@ -15,6 +15,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         handleSubmit: (data) => {
             dispatch(setTeamsNames(data));
+            //redirecting to the pitch page on form submission
             history.push("/football-pitch");
         }
     }

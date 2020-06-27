@@ -1,21 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// importing components
-import Jumbotron from "react-bootstrap/Jumbotron";
+// importing local components
 import Reset from "./../Reset";
-import Button from "react-bootstrap/Button";
 import TeamAPositions from "../TeamPositions/TeamAPositions";
 import TeamBPositions from "../TeamPositions/TeamBPositions";
 
-// importing styling and images
-import './../../assets/css/pitch-page.css';
-import footballPitch from './../../assets/images/footballPitch.jpg';
-import kit1 from './../../assets/images/kit1.png';
-import kit2 from './../../assets/images/kit2.png';
-import kit3 from './../../assets/images/kit3.png';
+// importing Bootstrap components
+import Jumbotron from "react-bootstrap/Jumbotron";
+import Button from "react-bootstrap/Button";
 
-// setting props
+// importing styling and images
+import "./../../assets/css/pitch-page.css";
+import footballPitch from "./../../assets/images/footballPitch.jpg";
+import kit1 from "./../../assets/images/kit1.png";
+import kit2 from "./../../assets/images/kit2.png";
+import kit3 from "./../../assets/images/kit3.png";
+
+// a component to wraps all of the components that make up the "football-pitch" page
 const FootballPitch = ({
     teamAName,
     teamBName,

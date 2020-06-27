@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import Kit from "./Kit";
 
-import { selectTeamAColor, selectTeamAKit } from "../../data/actions/state";
+import { selectTeamAKit, selectTeamAColor } from "../../data/actions/state";
 
 const mapStateToProps = (state) => {
     return {

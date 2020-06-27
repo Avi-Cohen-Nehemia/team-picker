@@ -1,6 +1,6 @@
 import React from "react";
-import Jumbotron from 'react-bootstrap/Jumbotron'
-import logo from './../../assets/images/ball.png';
+import Jumbotron from "react-bootstrap/Jumbotron"
+import logo from "./../../assets/images/ball.png";
 import Start from "../Start";
 import "./../../assets/css/home.css";
 
