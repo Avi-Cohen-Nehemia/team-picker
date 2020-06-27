@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/team-picker/static/css/main.3f1dc374.chunk.css",
-    "main.js": "/team-picker/static/js/main.7b202df5.chunk.js",
-    "main.js.map": "/team-picker/static/js/main.7b202df5.chunk.js.map",
+    "main.js": "/team-picker/static/js/main.f96258ca.chunk.js",
+    "main.js.map": "/team-picker/static/js/main.f96258ca.chunk.js.map",
     "runtime-main.js": "/team-picker/static/js/runtime-main.9503ab5e.js",
     "runtime-main.js.map": "/team-picker/static/js/runtime-main.9503ab5e.js.map",
-    "static/js/2.f734c30f.chunk.js": "/team-picker/static/js/2.f734c30f.chunk.js",
-    "static/js/2.f734c30f.chunk.js.map": "/team-picker/static/js/2.f734c30f.chunk.js.map",
+    "static/js/2.f2bc43ca.chunk.js": "/team-picker/static/js/2.f2bc43ca.chunk.js",
+    "static/js/2.f2bc43ca.chunk.js.map": "/team-picker/static/js/2.f2bc43ca.chunk.js.map",
     "index.html": "/team-picker/index.html",
-    "precache-manifest.05f3565a402255a34904174ff9661087.js": "/team-picker/precache-manifest.05f3565a402255a34904174ff9661087.js",
+    "precache-manifest.52c1a336ac2bda2005b5173e19d6c177.js": "/team-picker/precache-manifest.52c1a336ac2bda2005b5173e19d6c177.js",
     "service-worker.js": "/team-picker/service-worker.js",
     "static/css/main.3f1dc374.chunk.css.map": "/team-picker/static/css/main.3f1dc374.chunk.css.map",
-    "static/js/2.f734c30f.chunk.js.LICENSE.txt": "/team-picker/static/js/2.f734c30f.chunk.js.LICENSE.txt",
+    "static/js/2.f2bc43ca.chunk.js.LICENSE.txt": "/team-picker/static/js/2.f2bc43ca.chunk.js.LICENSE.txt",
     "static/media/ball.png": "/team-picker/static/media/ball.58966b8a.png",
     "static/media/App.css": "/team-picker/static/media/football.86b40b24.jpg",
     "static/media/footballPitch.jpg": "/team-picker/static/media/footballPitch.8c069787.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.9503ab5e.js",
-    "static/js/2.f734c30f.chunk.js",
+    "static/js/2.f2bc43ca.chunk.js",
     "static/css/main.3f1dc374.chunk.css",
-    "static/js/main.7b202df5.chunk.js"
+    "static/js/main.f96258ca.chunk.js"
   ]
 }
