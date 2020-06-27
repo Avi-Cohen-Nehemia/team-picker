@@ -1,0 +1,15 @@
+.home-container {
+    position: relative;
+    top: 3rem;
+    opacity: 0.7;
+    background-color: black;
+    color: white;
+}
+
+.home-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

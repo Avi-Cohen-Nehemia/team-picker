@@ -2,18 +2,11 @@ import React from "react";
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import logo from './../../assets/images/ball.png';
 import Start from "../Start";
+import "./../../assets/css/home.css";
 
 const Home = () => (
-    <Jumbotron
-        style={{
-            position: "relative",
-            top: "3rem",
-            opacity: 0.7,
-            backgroundColor: "black",
-            color: "white"
-        }}
-    >
-        <div className="justify-content-center d-flex align-items-center flex-column text-center">
+    <Jumbotron className="home-container">
+        <div className="home-main">
             <h1>Welcome to Football Team Generator!</h1>
             <img src={ logo } alt="football" width="130" height="130"/>
             <h5 className="mb-5">

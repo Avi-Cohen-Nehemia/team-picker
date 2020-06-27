@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import history from "./history";
 import { Router, Route, Link } from "react-router-dom";
-import Home from "./components/Home/Home";
+import Home from "./components/Home";
 import AddPlayer from "./components/AddPlayer";
 import PlayersTable from "./components/PlayersTable";
 import Reset from "./components/Reset";
