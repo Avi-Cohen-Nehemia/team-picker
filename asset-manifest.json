@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/team-picker/static/css/main.3f1dc374.chunk.css",
+    "main.js": "/team-picker/static/js/main.cffbb5ea.chunk.js",
+    "main.js.map": "/team-picker/static/js/main.cffbb5ea.chunk.js.map",
+    "runtime-main.js": "/team-picker/static/js/runtime-main.9503ab5e.js",
+    "runtime-main.js.map": "/team-picker/static/js/runtime-main.9503ab5e.js.map",
+    "static/js/2.cb60c66d.chunk.js": "/team-picker/static/js/2.cb60c66d.chunk.js",
+    "static/js/2.cb60c66d.chunk.js.map": "/team-picker/static/js/2.cb60c66d.chunk.js.map",
+    "index.html": "/team-picker/index.html",
+    "precache-manifest.a9f8e5b7a51ecd5b8fa7d22ab800c413.js": "/team-picker/precache-manifest.a9f8e5b7a51ecd5b8fa7d22ab800c413.js",
+    "service-worker.js": "/team-picker/service-worker.js",
+    "static/css/main.3f1dc374.chunk.css.map": "/team-picker/static/css/main.3f1dc374.chunk.css.map",
+    "static/js/2.cb60c66d.chunk.js.LICENSE.txt": "/team-picker/static/js/2.cb60c66d.chunk.js.LICENSE.txt",
+    "static/media/ball.png": "/team-picker/static/media/ball.58966b8a.png",
+    "static/media/App.css": "/team-picker/static/media/football.86b40b24.jpg",
+    "static/media/footballPitch.jpg": "/team-picker/static/media/footballPitch.8c069787.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9503ab5e.js",
+    "static/js/2.cb60c66d.chunk.js",
+    "static/css/main.3f1dc374.chunk.css",
+    "static/js/main.cffbb5ea.chunk.js"
+  ]
+}
