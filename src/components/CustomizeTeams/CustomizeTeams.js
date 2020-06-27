@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 // import local components
 import TeamAKit from "../Kits/TeamAKit";
@@ -82,6 +83,7 @@ class CustomizeTeams extends Component {
                         </Col>
                     </Row>
                     <Row className="d-flex justify-content-center mt-5">
+                        <Link to="/football-pitch">
                         <Button
                             size="lg"
                             variant="success"
@@ -89,6 +91,7 @@ class CustomizeTeams extends Component {
                         >
                             Start Playing!
                         </Button>
+                        </Link>
                     </Row>
                 </Form>
             </Container>

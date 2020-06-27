@@ -1,6 +1,6 @@
 import React from "react";
 import history from "./history";
-import { Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import ConfirmTeams from "./components/ConfirmTeams";
