@@ -1,23 +1,8 @@
 # Team Generator - Technical Challenge
 
-Technical challenge set to us by DevelopMe_ to demonstrate our skills as fresh grduates
-We were tasked with creating and deploying an application that creates 2 teams out of a list of 10 people.
-
-We were encourged to get creative and develop as many extra features as we want.
-
-## Installation
-
-Start by cloning the repository
-```
-git clone git@github.com:Avi-Cohen-Nehemia/team-picker.git
-```
-
-Then Install And Launch the App
-```
-cd project-directory
-
-npm i && npm start
-```
+## Background
+This App was built as a technical challenge set to us by DevelopMe_, to demonstrate our skills as fresh grduates
+We were encourged to get creative and try to develop as many extra features as we can within the given time limit.
 
 ## Technology Stack
 - React
@@ -47,3 +32,18 @@ The core of the challenge is to create a tool which randomly picks 5-a-side foot
 
 ## Unresolved issues
 - Teams colors and kits' state is stale.
+
+
+## Installation
+
+Start by cloning the repository
+```
+git clone git@github.com:Avi-Cohen-Nehemia/team-picker.git
+```
+
+Then Install And Launch the App
+```
+cd project-directory
+
+npm i && npm start
+```
