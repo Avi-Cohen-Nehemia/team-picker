@@ -10,8 +10,8 @@ class AddPlayer extends Component {
         super(props);
 
         this.state = {
-            playerName: props.playerName,
-            playerSkillLevel: props.playerSkillLevel
+            playerName: "",
+            playerSkillLevel: "⭐"
         };
 
         this.handlePlayerName = this.handlePlayerName.bind(this);
@@ -52,7 +52,7 @@ class AddPlayer extends Component {
                                     placeholder="Enter player's name"
                                     onChange={ this.handlePlayerName }
                                     value={this.state.playerName}
-                                    maxLength="20"
+                                    maxLength="10"
                                 />
                             </Form.Group>
                         </Col>
