@@ -11,10 +11,9 @@ import Home from "./components/Home";
 import AddPlayer from "./components/AddPlayer";
 import PlayersTable from "./components/PlayersTable";
 import Reset from "./components/Reset";
-import TeamTable from './components/TeamTable';
+import ConfirmTeams from './components/ConfirmTeams';
 import GenerateTeams from './components/GenerateTeams';
 import AlertMessage from './components/AlertMessage';
-import Button from 'react-bootstrap/Button';
 import CustomizeTeams from './components/CustomizeTeams';
 import FootballPitch from './components/FootballPitch';
 
@@ -42,31 +41,7 @@ const App = () => (
             </Container>
         </Route>
 
-        <Route exact path="/confirm-teams">
-            <Container>
-                <TeamTable/>
-                <Row className="mt-4">
-                    <Col className="justify-content-center d-flex">
-                        <Link to="/customize-teams">
-                            <Button variant="success">
-                                Confirm Teams
-                            </Button>
-                        </Link>
-                    </Col>
-                    <Col className="justify-content-center d-flex">
-                        <GenerateTeams
-                            text={ "Reshuffle Teams" }
-                            color={ "warning" }
-                        />
-                    </Col>
-                    <Col className="justify-content-center d-flex">
-                        <Link to="/create-players">
-                            <Reset text={ "Start Over" }/>
-                        </Link>
-                    </Col>
-                </Row>
-            </Container>
-        </Route>
+        <Route exact path="/confirm-teams" component={ ConfirmTeams }/>
 
         <Route exact path="/customize-teams" component={ CustomizeTeams }/>
 
