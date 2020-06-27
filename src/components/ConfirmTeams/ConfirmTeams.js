@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button'
 import Reset from "../Reset";
 import GenerateTeams from '../GenerateTeams';
 
-const ConfirmTeams = ({ teamA, teamB }) => (
+const ConfirmTeams = ({ teamA, teamB, teamASkillLevel, teamBSkillLevel }) => (
     <Container>
         <Row style={{ paddingTop: "15%" }}>
             <Col>
@@ -21,10 +21,11 @@ const ConfirmTeams = ({ teamA, teamB }) => (
                                 key={ index }
                                 className="d-flex justify-content-around"
                             >
-                                <span>{ player.name}</span>
-                                <span>{player.skillLevel}</span>
+                                <Col>{ player.name}</Col>
+                                <Col>{player.skillLevel}</Col>
                             </ListGroup.Item>
                         )) }
+                        <ListGroup.Item>Total Skill Level: <strong>{ teamASkillLevel }</strong></ListGroup.Item>
                     </ListGroup>
                 </Card>
             </Col>
@@ -37,10 +38,11 @@ const ConfirmTeams = ({ teamA, teamB }) => (
                                 key={ index }
                                 className="d-flex justify-content-around"
                             >
-                                <span>{ player.name}</span>
-                                <span>{player.skillLevel}</span>
+                                <Col>{ player.name}</Col>
+                                <Col>{player.skillLevel}</Col>
                             </ListGroup.Item>
                         )) }
+                        <ListGroup.Item>Total Skill Level: <strong>{ teamBSkillLevel }</strong></ListGroup.Item>
                     </ListGroup>
                 </Card>
             </Col>
