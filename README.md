@@ -1,6 +1,7 @@
 # Team Generator - Technical Challenge
 
 ## Live Version
+https://avi-cohen-nehemia.github.io/team-picker/#/
 
 ## Background
 This App was built as a technical challenge set to us by DevelopMe_, to demonstrate our skills as fresh grduates
