@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Reset from "./../Reset";
 import Button from "react-bootstrap/Button";
-import TeamAPositions from "./../TeamAPositions";
-import TeamBPositions from "./../TeamBPositions";
+import TeamAPositions from "../TeamPositions/TeamAPositions";
+import TeamBPositions from "../TeamPositions/TeamBPositions";
 
 // importing styling and images
 import './../../assets/css/pitch-page.css';
