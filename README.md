@@ -37,15 +37,10 @@ The core of the challenge is to create a tool which randomly picks 5-a-side foot
 ## Reflection
 
 ### Tech stack choice
-Looking back, leaving my comfort zone and using React/Redux meant I did not finish everything I was plannig
-to accomplish. However, I'm still glad I chose that tech-stack as it made me learn a lot about React/Redux,
-and some things I did not understand during the course, now make much more sense.
+Looking back, leaving my comfort zone and using React/Redux meant I did not finish everything I was plannig to accomplish. However, I'm still glad I chose that tech-stack as it made me learn a lot about React/Redux, and some things I did not understand during the course, now make much more sense.
 
 ### Planning
-Lack of planning on my part meant that sometimes I struggled more than I should have. I found myself at times, coding
-all over the place, jumping from a problem to another with no clear roadmap in my head to follow. At the start I did not
-notice the impact of this kind approach but later I had to face all kinds of issues and bugs that could have been
-avoided with better planning.
+Lack of planning on my part meant that sometimes I struggled more than I should have. I found myself at times, coding all over the place, jumping from a problem to another with no clear roadmap in my head to follow. At the start I did not notice the impact of this kind approach but later I had to face all kinds of issues and bugs that could have been avoided with better planning.
 
 Doing this project was a reminder for me on how important it is to plan before jumping on a problem and starting to code.
 
