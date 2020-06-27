@@ -1,13 +1,21 @@
 import React, { Component } from "react";
-import Container from 'react-bootstrap/Container';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+
+// import local components
 import TeamAKit from "../Kits/TeamAKit";
 import TeamBKit from "../Kits/TeamBKit";
 
+// import Bootstrap components
+import Container from "react-bootstrap/Container";
+import Jumbotron from "react-bootstrap/Jumbotron";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+
+// import page styling
+import "./../../assets/css/customize-page.css";
+
+// a component to wraps all of the components that make up the "customize-teams" page
 class CustomizeTeams extends Component {
 
     constructor(props) {
@@ -43,19 +51,9 @@ class CustomizeTeams extends Component {
                 <Form onSubmit={ this.handleSubmit }>
                     <Row>
                         <Col>
-                            <Jumbotron
-                                style={{
-                                    position: "relative",
-                                    top: "3rem",
-                                    opacity: 0.7,
-                                    backgroundColor: "black",
-                                    color: "white",
-                                }}
-                            >
+                            <Jumbotron className="customize-container">
                                 <Form.Group>
-                                    <Form.Label style={{ color: "white" }}>
-                                        <strong>Team A Name</strong>
-                                    </Form.Label>
+                                    <Form.Label className="customize-label">Team A Name</Form.Label>
                                     <Form.Control
                                         type="text"
                                         placeholder="Enter team's name"
@@ -68,19 +66,9 @@ class CustomizeTeams extends Component {
                             </Jumbotron>
                         </Col>
                         <Col>
-                            <Jumbotron
-                                style={{
-                                    position: "relative",
-                                    top: "3rem",
-                                    opacity: 0.7,
-                                    backgroundColor: "black",
-                                    color: "white"
-                                }}
-                            >
+                            <Jumbotron className="customize-container">
                                 <Form.Group>
-                                    <Form.Label style={{ color: "white" }}>
-                                        <strong>Team B Name</strong>
-                                    </Form.Label>
+                                    <Form.Label className="customize-label">Team B Name</Form.Label>
                                     <Form.Control
                                         type="text"
                                         placeholder="Enter team's name"

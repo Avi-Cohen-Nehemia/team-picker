@@ -1,6 +1,9 @@
 import React from "react";
-import Alert from 'react-bootstrap/Alert'
 
+//import Bootstrap components
+import Alert from "react-bootstrap/Alert";
+
+// show a message which its content and color depend on a condition
 const AlertMessage = ({ conditionsNotMet }) => (
     <Alert
         variant={ conditionsNotMet ? "danger" : "success"}

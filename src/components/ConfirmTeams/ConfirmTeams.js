@@ -1,13 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+// import local components
+import Reset from "../Reset";
+import GenerateTeams from '../GenerateTeams';
+
+//import Bootstrap components
 import Card from 'react-bootstrap/Card'
 import ListGroup from "react-bootstrap/ListGroup"
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
-import Reset from "../Reset";
-import GenerateTeams from '../GenerateTeams';
 
 const ConfirmTeams = ({ teamA, teamB, teamASkillLevel, teamBSkillLevel }) => (
     <Container>
