@@ -1,16 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import footballPitch from './../../assets/images/footballPitch.jpg';
-import './../../assets/css/pitch-page.css';
+
+// importing components
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Reset from "./../Reset";
 import Button from "react-bootstrap/Button";
-import kit1 from './../../assets/images/kit1.png';
-import kit2 from './../../assets/images/kit2.png';
-import kit3 from './../../assets/images/kit3.png';
 import TeamAPositions from "./../TeamAPositions";
 import TeamBPositions from "./../TeamBPositions";
 
+// importing styling and images
+import './../../assets/css/pitch-page.css';
+import footballPitch from './../../assets/images/footballPitch.jpg';
+import kit1 from './../../assets/images/kit1.png';
+import kit2 from './../../assets/images/kit2.png';
+import kit3 from './../../assets/images/kit3.png';
+
+// setting props
 const FootballPitch = ({
     teamAName,
     teamBName,
