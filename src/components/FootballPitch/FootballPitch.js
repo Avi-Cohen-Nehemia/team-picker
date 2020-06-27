@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import footballPitch from './../../assets/images/footballPitch.jpg';
+import './../../assets/css/pitch-page.css';
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Reset from "./../Reset";
 import Button from "react-bootstrap/Button";
@@ -47,36 +48,19 @@ const FootballPitch = ({
                 transform: "translate(-50%, -50%)",
             }}
         >      
-            <Jumbotron
-                style={{
-                    position: "relative",
-                    opacity: 0.7,
-                    backgroundColor: "black",
-                    marginRight: "2rem",
-                    width: "18rem",
-                    height: "70%"
-                }}
-            >
+            <Jumbotron className="team-panel-a">
                 <div className="d-flex flex-column align-items-center justify-content-center">
                     <h1 
-                        className="px-3 mb-4"
-                        style={{
-                            backgroundColor: teamAColor,
-                            textAlign: "center"
-                        }}
+                        className="px-3 mb-4 text-center"
+                        style={{ backgroundColor: teamAColor }}
                     >
                         { teamAName }
                     </h1>
                     <img
                         src={ teamAKit === 1 ? kit1 : (teamAKit === 2 ? kit2 : kit3) }
-                        height="100"
-                        width="100"
                         alt="team kit"
-                        className="mb-3"
-                        style={{
-                            backgroundColor: teamAColor,
-                            borderRadius: "5px"
-                        }}
+                        className="team-kit"
+                        style={{ backgroundColor: teamAColor }}
                     />
                     <h1
                         style={{ color: "white" }}
@@ -97,36 +81,19 @@ const FootballPitch = ({
                 src={ footballPitch }
                 alt="football pitch"
             />
-            <Jumbotron
-                style={{
-                    position: "relative",
-                    opacity: 0.7,
-                    backgroundColor: "black",
-                    marginLeft: "2rem",
-                    width: "18rem",
-                    height: "70%"
-                }}
-            >
+            <Jumbotron className="team-panel-b">
                 <div className="d-flex flex-column align-items-center justify-content-center">
                     <h1 
-                        className="px-3 mb-4"
-                        style={{
-                            backgroundColor: teamBColor,
-                            textAlign: "center"
-                        }}
+                        className="px-3 mb-4 text-center"
+                        style={{ backgroundColor: teamBColor }}
                     >
                         { teamBName }
                     </h1>
                     <img
                         src={ teamBKit === 1 ? kit1 : (teamBKit === 2 ? kit2 : kit3) }
-                        height="100"
-                        width="100"
                         alt="team kit"
-                        className="mb-3"
-                        style={{
-                            backgroundColor: teamBColor,
-                            borderRadius: "5px"
-                        }}
+                        className="team-kit"
+                        style={{ backgroundColor: teamBColor }}
                     />
                     <h1
                         style={{ color: "white" }}
@@ -146,9 +113,7 @@ const FootballPitch = ({
         </div>
         <div
             className="d-flex justify-content-center"
-            style={{
-                paddingTop: "90vh"
-            }}
+            style={{ paddingTop: "90vh" }}
         >
             <Button
                 onClick={ handleResetScore }

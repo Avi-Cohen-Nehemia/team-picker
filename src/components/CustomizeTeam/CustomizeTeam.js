@@ -59,7 +59,7 @@ class CustomizeTeams extends Component {
                                     placeholder="Enter team's name"
                                     onChange={ this.handleTeamAName }
                                     value={this.state.teamAName}
-                                    maxLength="20"
+                                    maxLength="10"
                                 />
                             </Form.Group>
                             <TeamAKit/>
@@ -84,7 +84,7 @@ class CustomizeTeams extends Component {
                                     placeholder="Enter team's name"
                                     onChange={ this.handleTeamBName }
                                     value={this.state.teamBName}
-                                    maxLength="20"
+                                    maxLength="10"
                                 />
                             </Form.Group>
                             <TeamBKit/>

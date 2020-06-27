@@ -1,0 +1,24 @@
+.team-panel-a {
+    position: relative;
+    opacity: 0.7;
+    background-color: black;
+    margin-right: 2rem;
+    width: 18rem;
+    height: 70%;
+}
+
+.team-panel-b {
+    position: relative;
+    opacity: 0.7;
+    background-color: black;
+    margin-left: 2rem;
+    width: 18rem;
+    height: 70%;
+}
+
+.team-kit {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}

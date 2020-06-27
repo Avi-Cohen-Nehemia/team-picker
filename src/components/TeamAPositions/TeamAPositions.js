@@ -1,6 +1,7 @@
 import React from "react";
 import PlayerIcon from "../PlayerIcon";
 
+// team A poistions on the pitch-page
 const TeamAPositions = ({ teamAPlayers, teamAColor, teamAKit }) => (
     <div>
         <div
