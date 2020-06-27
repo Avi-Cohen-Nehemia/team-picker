@@ -16,7 +16,7 @@ const Home = () => (
                 <span role="img" aria-label="shirt">👕</span> Customize your teams
             </h5>
             <h5 className="mb-5">
-                <span role="img" aria-label="laptop">💻</span> Share with your friends!
+                <span role="img" aria-label="laptop">💻</span> Keep track of the scores and share with your friends!
             </h5>
             <Start/>
         </div>
