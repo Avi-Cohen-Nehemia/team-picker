@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import CustomizeTeams from "./CustomizeTeam";
+import CustomizeTeams from "./CustomizeTeams";
 import history from "../../history";
 
 import { setTeamsNames } from "../../data/actions/state";

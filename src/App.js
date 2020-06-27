@@ -1,19 +1,21 @@
 import React from 'react';
-import './App.css';
 import history from "./history";
 import { Router, Route, Link } from "react-router-dom";
+
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
+import './App.css';
 import Home from "./components/Home";
 import AddPlayer from "./components/AddPlayer";
 import PlayersTable from "./components/PlayersTable";
 import Reset from "./components/Reset";
 import TeamTable from './components/TeamTable';
 import GenerateTeams from './components/GenerateTeams';
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import AlertMessage from './components/AlertMessage';
 import Button from 'react-bootstrap/Button';
-import CustomizeTeams from './components/CustomizeTeam';
+import CustomizeTeams from './components/CustomizeTeams';
 import FootballPitch from './components/FootballPitch';
 
 const App = () => (
@@ -66,15 +68,9 @@ const App = () => (
             </Container>
         </Route>
 
-        <Route exact path="/customize-teams">
-            <Container>
-                <CustomizeTeams/>
-            </Container>
-        </Route>
+        <Route exact path="/customize-teams" component={ CustomizeTeams }/>
 
-        <Route exact path="/football-pitch">
-            <FootballPitch/>
-        </Route>
+        <Route exact path="/football-pitch" component={ FootballPitch }/>
     </Router>
 );
 
