@@ -39,7 +39,7 @@ const FootballPitch = ({
             <TeamAPositions/>
             <TeamBPositions/>
         </div>
-        <div className="d-flex justify-content-between align-items-center pitch-container">      
+        <div className="pitch-container">      
             <Jumbotron className="team-panel-a">
                 <div className="d-flex flex-column align-items-center justify-content-center">
                     <h1 
