@@ -59,10 +59,7 @@ const FootballPitch = ({
                         className="team-kit"
                         style={{ backgroundColor: teamAColor }}
                     />
-                    <h1
-                        style={{ color: "white" }}
-                        className="mb-3"
-                    >
+                    <h1 className="mb-3 text-white">
                         { teamAScore }
                     </h1>
                     <Button
@@ -92,10 +89,7 @@ const FootballPitch = ({
                         className="team-kit"
                         style={{ backgroundColor: teamBColor }}
                     />
-                    <h1
-                        style={{ color: "white" }}
-                        className="mb-3"
-                    >
+                    <h1 className="mb-3 text-white">
                         { teamBScore }
                     </h1>
                     <Button

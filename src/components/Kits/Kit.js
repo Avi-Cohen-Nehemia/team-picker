@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Form from "react-bootstrap/Form";
 import { CirclePicker } from 'react-color';
+
+// importing assets
+import "./../../assets/css/kits.css"
 import kit1 from './../../assets/images/kit1.png';
 import kit2 from './../../assets/images/kit2.png';
 import kit3 from './../../assets/images/kit3.png';
@@ -59,34 +62,22 @@ class Kits extends Component {
                         <img
                             src={ kit1 }
                             alt="football-shirt"
-                            width="50"
-                            height="50"
-                            style={{ 
-                                backgroundColor: this.state.selected === 1 ? this.state.color : null,
-                                borderRadius: "5px"
-                             }}
+                            className="kit-logo"
+                            style={{ backgroundColor: this.state.selected === 1 ? this.state.color : null }}
                             onClick={ this.handleKit1 }
                         />
                         <img
                             src={ kit2 }
                             alt="football-shirt"
-                            width="50"
-                            height="50"
-                            style={{ 
-                                backgroundColor: this.state.selected === 2 ? this.state.color : null,
-                                borderRadius: "5px"
-                             }}
+                            className="kit-logo"
+                            style={{ backgroundColor: this.state.selected === 2 ? this.state.color : null }}
                             onClick={ this.handleKit2 }
                         />
                         <img
                             src={ kit3 }
                             alt="football-shirt"
-                            width="50"
-                            height="50"
-                            style={{ 
-                                backgroundColor: this.state.selected === 3 ? this.state.color : null,
-                                borderRadius: "5px"
-                             }}
+                            className="kit-logo"
+                            style={{ backgroundColor: this.state.selected === 3 ? this.state.color : null }}
                             onClick={ this.handleKit3 }
                         />
                     </div>
