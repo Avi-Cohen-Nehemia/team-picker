@@ -24,6 +24,7 @@ The core of the challenge is to create a tool which randomly picks 5-a-side foot
 ## Additional Features Implemented
 - [x] Create teams with 3-6 players a side.
 - [x] Players have skill level.
+- [x] "remove player" button during the "players-creation" phase.
 - [x] Confirm / ReShuffle teams.
 - [x] Cusomizable kits, colours and names.
 - [x] Players laid out on an image of a football pitch.
@@ -36,7 +37,6 @@ The core of the challenge is to create a tool which randomly picks 5-a-side foot
 - Make the app responsive/mobile-friendly .
 - Ability to reshuffle teams fairly based on total skill level.
 - Abilty to set winning score which ends the current game automatically.
-- Individual delete button for each player during the "players-creation" phase.
 - Building back-end API to keep track of match history.
 
 
