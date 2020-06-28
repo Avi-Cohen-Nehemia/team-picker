@@ -8,6 +8,13 @@ export const addPlayer = (data) => {
     };
 };
 
+export const removePlayer = (index) => {
+    return {
+        type: "REMOVE_PLAYER",
+        index: index,
+    };
+};
+
 export const generateTeams = () => {
     return {
         type: "GENERATE_TEAMS",

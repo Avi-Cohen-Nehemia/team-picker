@@ -16,6 +16,14 @@ const addPlayer = (state, action) => {
     }
 };
 
+// remove a specific player
+const removePlayer = (state, { index }) => {
+    return {
+        ...state,
+        playersPool: state.playersPool.filter((_, i) => i !== index)
+    }
+};
+
 // shuffle the players pool
 const shufflePlayers = (state) => {
     return {
@@ -159,6 +167,7 @@ const resetScore = (state) => {
 const reducer = (state, action) => {
     switch (action.type) {
         case "ADD_PLAYER": return addPlayer(state, action);
+        case "REMOVE_PLAYER": return removePlayer(state, action);
         case "GENERATE_TEAMS": return totalSkillLevel(generateTeams(shufflePlayers(state)));
         case "SELECT_TEAM_A_KIT": return selectTeamAKit(state, action);
         case "SELECT_TEAM_B_KIT": return selectTeamBKit(state, action);
