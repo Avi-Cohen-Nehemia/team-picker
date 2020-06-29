@@ -1,73 +1,73 @@
 /* team A players positions */
 .player-a-1 {
     position: absolute;
-    top: 41%;
-    left: 23%;
+    top: 40%;
+    left: 10%;
 }
 
 .player-a-2 {
     position: absolute;
-    top: 16%;
-    left: 32%;
+    top: 10%;
+    left: 23%;
 }
 
 .player-a-3 {
     position: absolute;
-    top: 66%;
-    left: 32%;
+    top: 70%;
+    left: 23%;
 }
 
 .player-a-4 {
     position: absolute;
-    top: 41%;
-    left: 32%;
+    top: 40%;
+    left: 23%;
 }
 
 .player-a-5 {
     position: absolute;
-    top: 30%;
-    left: 40%;
+    top: 25%;
+    left: 35%;
 }
 
 .player-a-6 {
     position: absolute;
-    top: 54%;
-    left: 40%;
+    top: 55%;
+    left: 35%;
 }
 
 /* team B players positions */
 .player-b-1 {
     position: absolute;
-    top: 41%;
-    right: 23%;
+    top: 40%;
+    right: 10%;
 }
 
 .player-b-2 {
     position: absolute;
-    top: 16%;
-    right: 32%;
+    top: 10%;
+    right: 23%;
 }
 
 .player-b-3 {
     position: absolute;
-    top: 66%;
-    right: 32%;
+    top: 70%;
+    right: 23%;
 }
 
 .player-b-4 {
     position: absolute;
-    top: 41%;
-    right: 32%;
+    top: 40%;
+    right: 23%;
 }
 
 .player-b-5 {
     position: absolute;
-    top: 30%;
-    right: 40%;
+    top: 25%;
+    right: 35%;
 }
 
 .player-b-6 {
     position: absolute;
-    top: 54%;
-    right: 40%;
+    top: 55%;
+    right: 35%;
 }
