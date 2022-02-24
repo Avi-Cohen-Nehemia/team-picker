@@ -1,18 +1,24 @@
-import { connect } from "react-redux";
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { generateTeams } from "../../data/actions/state";
-import GenerateTeams from "./GenerateTeams";
+import Button from 'react-bootstrap/Button';
 
-// allow the user to generate the teams only if the conditions below are met
-const mapStateToProps = (state) => {
-    return {
-        conditionsNotMet: state.playersPool.length < 6 || state.playersPool.length % 2 !== 0,
-    };
+const GenerateTeams = ({ color, children }) => {
+
+  const { playersPool } = useSelector((state) => state)
+  const dispatch = useDispatch()
+
+  const isValid = playersPool.length > 5 && playersPool.length % 2 === 0;
+
+  return (
+    <Button
+      variant={color}
+      onClick={() => dispatch(generateTeams())}
+      disabled={!isValid}
+    >
+      {children}
+    </Button>
+  );
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        handleGenerateTeams: () => dispatch(generateTeams()),
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(GenerateTeams);
+export default GenerateTeams;

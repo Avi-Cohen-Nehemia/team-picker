@@ -4,6 +4,7 @@ import Alert from 'react-bootstrap/Alert';
 
 // show a message which its content and color depend on a condition
 const AlertMessage = () => {
+
   const { playersPool } = useSelector((state) => state);
   const isValid = playersPool.length > 5 && playersPool.length % 2 === 0;
 

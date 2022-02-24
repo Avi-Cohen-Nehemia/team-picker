@@ -4,7 +4,7 @@ import AddPlayer from './../AddPlayer';
 import PlayersTable from './../PlayersTable';
 import AlertMessage from './../AlertMessage';
 import Reset from './../Reset';
-import GenerateTeams from './../GenerateTeams';
+import GenerateTeams from '../GenerateTeams';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -19,10 +19,9 @@ const CreatePlayers = () => (
       <Row>
         <Col className='justify-content-center d-flex'>
           <Link to='/confirm-teams'>
-            <GenerateTeams
-              text={'Generate Teams'}
-              color={'success'}
-            />
+            <GenerateTeams color={'success'}>
+              Generate Teams
+            </GenerateTeams>
           </Link>
         </Col>
         <Col className='justify-content-center d-flex'>

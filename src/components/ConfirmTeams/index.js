@@ -11,6 +11,7 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
 const ConfirmTeams = () => {
+
   const { teamA, teamB } = useSelector((state) => state);
 
   return (
