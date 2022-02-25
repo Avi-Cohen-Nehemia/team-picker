@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removePlayer } from "../../data/actions/state";
-import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
+import { removePlayer } from '../../data/actions/state';
+import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 
 const PlayersTable = () => {
 
@@ -14,9 +14,9 @@ const PlayersTable = () => {
       striped
       bordered
       hover
-      size="sm"
-      variant="dark"
-      className="mt-3 text-center"
+      size='sm'
+      variant='dark'
+      className='mt-3 text-center'
     >
       <thead>
         <tr>
@@ -34,8 +34,8 @@ const PlayersTable = () => {
             <td>{player.skillLevel}</td>
             <td>
               <Button
-                variant="danger"
-                style={{lineHeight: "0.5"}}
+                variant='danger'
+                style={{lineHeight: '0.5'}}
                 onClick={() => dispatch(removePlayer(index))}
               >
                 {'X'}

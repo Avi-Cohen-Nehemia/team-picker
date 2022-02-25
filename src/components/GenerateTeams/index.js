@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { generateTeams } from "../../data/actions/state";
+import { generateTeams } from '../../data/actions/state';
 import Button from 'react-bootstrap/Button';
 
 const GenerateTeams = ({ color, children }) => {

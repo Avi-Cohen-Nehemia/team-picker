@@ -36,7 +36,7 @@ const ConfirmTeams = () => {
         </Col>
         <Col>
             <Card className='text-center'>
-              <Card.Header>Team B</Card.Header>
+              <Card.Header>{'Team B'}</Card.Header>
               <ListGroup variant='flush'>
                 { teamB.players.map((player, index) => (
                   <ListGroup.Item
@@ -61,10 +61,9 @@ const ConfirmTeams = () => {
           </Link>
         </Col>
         <Col className='justify-content-center d-flex'>
-          <GenerateTeams
-            text={'Reshuffle Teams'}
-            color={'warning'}
-          />
+          <GenerateTeams color={'warning'}>
+            {'Reshuffle Teams'}
+          </GenerateTeams>
         </Col>
         <Col className='justify-content-center d-flex'>
           <Reset>{'Start Over'}</Reset>

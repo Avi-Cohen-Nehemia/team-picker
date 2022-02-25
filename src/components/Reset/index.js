@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from "react-router-dom";
-import Button from "react-bootstrap/Button";
-import { resetGame } from "../../data/actions/state";
+import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import { resetGame } from '../../data/actions/state';
 
-// a component to erase all data and start over from the "create-players" page
+// a component to erase all data and start over from the 'create-players' page
 const Reset = ({ children }) => {
 
   const dispatch = useDispatch();
@@ -12,7 +12,7 @@ const Reset = ({ children }) => {
   return (
     <Link to='/create-players'>
       <Button
-        variant="danger"
+        variant='danger'
         onClick={() => dispatch(resetGame())}
       >
         {children}
