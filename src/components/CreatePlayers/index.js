@@ -20,12 +20,12 @@ const CreatePlayers = () => (
         <Col className='justify-content-center d-flex'>
           <Link to='/confirm-teams'>
             <GenerateTeams color={'success'}>
-              Generate Teams
+              {'Generate Teams'}
             </GenerateTeams>
           </Link>
         </Col>
         <Col className='justify-content-center d-flex'>
-          <Reset text={'Reset'}/>
+          <Reset>{'Reset'}</Reset>
         </Col>
       </Row>
     </Container>
