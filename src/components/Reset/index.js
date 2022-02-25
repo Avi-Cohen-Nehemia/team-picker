@@ -1,12 +1,24 @@
-import { connect } from "react-redux";
-import Reset from "./Reset";
-
+import React from "react";
+import { useDispatch } from 'react-redux';
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 import { resetGame } from "../../data/actions/state";
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        handleReset: () => dispatch(resetGame()),
-    };
+// a component to erase all data and start over from the "create-players" page
+const Reset = ({ children }) => {
+
+  const dispatch = useDispatch();
+
+  return (
+    <Link to='/create-players'>
+      <Button
+        variant="danger"
+        onClick={() => dispatch(resetGame())}
+      >
+        {children}
+      </Button>
+    </Link>
+  );
 };
 
-export default connect(null, mapDispatchToProps)(Reset);
+export default Reset;

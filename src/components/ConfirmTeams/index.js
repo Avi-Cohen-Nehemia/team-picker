@@ -19,7 +19,7 @@ const ConfirmTeams = () => {
       <Row style={{ paddingTop: '15%' }}>
         <Col>
           <Card className='text-center'>
-            <Card.Header>Team A</Card.Header>
+            <Card.Header>{'Team A'}</Card.Header>
             <ListGroup variant='flush'>
               { teamA.players.map((player, index) => (
                 <ListGroup.Item
@@ -30,7 +30,7 @@ const ConfirmTeams = () => {
                   <Col>{player.skillLevel}</Col>
                 </ListGroup.Item>
               )) }
-              <ListGroup.Item>Total Skill Level: <strong>{teamA.totalSkillLevel}</strong></ListGroup.Item>
+              <ListGroup.Item>{'Total Skill Level: '}<strong>{teamA.totalSkillLevel}</strong></ListGroup.Item>
             </ListGroup>
           </Card>
         </Col>
@@ -47,7 +47,7 @@ const ConfirmTeams = () => {
                     <Col>{player.skillLevel}</Col>
                   </ListGroup.Item>
                 )) }
-                <ListGroup.Item>Total Skill Level: <strong>{teamB.totalSkillLevel}</strong></ListGroup.Item>
+                <ListGroup.Item>{'Total Skill Level: '}<strong>{teamB.totalSkillLevel}</strong></ListGroup.Item>
               </ListGroup>
             </Card>
         </Col>
@@ -56,7 +56,7 @@ const ConfirmTeams = () => {
         <Col className='justify-content-center d-flex'>
           <Link to='/customize-teams'>
             <Button variant='success'>
-              Confirm Teams
+              {'Confirm Teams'}
             </Button>
           </Link>
         </Col>
@@ -67,9 +67,7 @@ const ConfirmTeams = () => {
           />
         </Col>
         <Col className='justify-content-center d-flex'>
-          <Link to='/create-players'>
-            <Reset text={'Start Over'}/>
-          </Link>
+          <Reset>{'Start Over'}</Reset>
         </Col>
       </Row>
     </Container>
