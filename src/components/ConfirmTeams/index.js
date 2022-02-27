@@ -72,4 +72,5 @@ const ConfirmTeams = () => {
     </Container>
   );
 };
+
 export default ConfirmTeams;
