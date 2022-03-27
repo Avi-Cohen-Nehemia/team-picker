@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 // import local components
-import TeamAKit from "../Kits/TeamAKit";
-import TeamBKit from "../Kits/TeamBKit";
+import Kit from "../Kit";
 
 // import Bootstrap components
 import Container from "react-bootstrap/Container";
@@ -63,7 +62,7 @@ class CustomizeTeams extends Component {
                                         maxLength="10"
                                     />
                                 </Form.Group>
-                                <TeamAKit/>
+                                <Kit defaultColor={'red'} team={'a'} />
                             </Jumbotron>
                         </Col>
                         <Col>
@@ -78,7 +77,7 @@ class CustomizeTeams extends Component {
                                         maxLength="10"
                                     />
                                 </Form.Group>
-                                <TeamBKit/>
+                                <Kit defaultColor={'blue'} team={'b'} />
                             </Jumbotron>
                         </Col>
                     </Row>
