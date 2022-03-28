@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { selectTeamAKit, selectTeamAColor, selectTeamBKit, selectTeamBColor } from "../../data/actions/state";
 import Form from 'react-bootstrap/Form';
 import { CirclePicker } from 'react-color';
@@ -8,12 +8,12 @@ import kit1 from './../../assets/images/kit1.png';
 import kit2 from './../../assets/images/kit2.png';
 import kit3 from './../../assets/images/kit3.png';
 
-const Kit = ({defaultColor, team}) => {
+const Kit = ({team}) => {
 	const dispatch = useDispatch();
 
 	const [kit, setKit] = useState({
 		selected: 1,
-		color: defaultColor,
+		color: team === 'a' ? 'red' : 'blue',
 	});
 
 	const handleKit = (number, team) => {
@@ -81,7 +81,7 @@ const Kit = ({defaultColor, team}) => {
 				<Form.Label style={{color: 'white'}}>
 					<strong>Choose Colour</strong>
 				</Form.Label>
-				<CirclePicker onChange={handleColorPicker} />
+				<CirclePicker onChange={(color) => handleColorPicker(color, team)} />
 			</Form.Group>
 		</>
 	);
