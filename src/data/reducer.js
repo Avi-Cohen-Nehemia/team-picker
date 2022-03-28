@@ -78,27 +78,17 @@ const totalSkillLevel = (state) => {
 	}
 }
 
-const selectTeamAKit = (state, action) => {
+const selectTeamKit = (state, action) => {
 	return {
 		...state,
-		teamA: {
-			...state.teamA,
-			kit: action.teamA.kit
+		[action.team]: {
+			...state[action.team],
+			kit: action.kit
 		},
 	}
 }
 
-const selectTeamBKit = (state, action) => {
-	return {
-		...state,
-		teamB: {
-			...state.teamB,
-			kit: action.teamB.kit
-		},
-	}
-}
-
-const selectTeamAColor = (state, action) => {
+const selectTeamColor = (state, action) => {
 	return {
 		...state,
 		[action.team]: {
@@ -161,9 +151,8 @@ const reducer = (state, action) => {
 		case "ADD_PLAYER": return addPlayer(state, action);
 		case "REMOVE_PLAYER": return removePlayer(state, action);
 		case "GENERATE_TEAMS": return totalSkillLevel(generateTeams(shufflePlayers(state)));
-		case "SELECT_TEAM_A_KIT": return selectTeamAKit(state, action);
-		case "SELECT_TEAM_B_KIT": return selectTeamBKit(state, action);
-		case "SELECT_TEAM_COLOR": return selectTeamAColor(state, action);
+		case "SELECT_TEAM_KIT": return selectTeamKit(state, action);
+		case "SELECT_TEAM_COLOR": return selectTeamColor(state, action);
 		case "SET_TEAMS_NAMES": return setTeamsNames(state, action);
 		case "INCREMENT_TEAM_A_SCORE": return incrementTeamAScore(state);
 		case "INCREMENT_TEAM_B_SCORE": return incrementTeamBScore(state);

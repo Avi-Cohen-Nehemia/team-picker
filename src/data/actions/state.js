@@ -21,21 +21,11 @@ export const generateTeams = () => {
 	}
 }
 
-export const selectTeamAKit = (data) => {
+export const selectTeamKit = (data, team) => {
 	return {
-		type: "SELECT_TEAM_A_KIT",
-		teamA: {
-			kit: data,
-		} 
-	}
-}
-
-export const selectTeamBKit = (data) => {
-	return {
-		type: "SELECT_TEAM_B_KIT",
-		teamB: {
-			kit: data,
-		} 
+		type: "SELECT_TEAM_KIT",
+		team: team,
+		kit: data
 	}
 }
 
