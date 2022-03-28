@@ -15,6 +15,12 @@ import kit1 from './../../assets/images/kit1.png';
 import kit2 from './../../assets/images/kit2.png';
 import kit3 from './../../assets/images/kit3.png';
 
+const KITS = {
+	1: kit1,
+	2: kit2,
+	3: kit3,
+};
+
 // a component to wraps all of the components that make up the 'football-pitch' page
 const FootballPitch = () => {
 	const {	teamA, teamB } = useSelector((state) => state);
@@ -68,14 +74,14 @@ const FootballPitch = () => {
 						{teamA.name}
 					</h1>
 					<img
-						src={teamA.kit === 1 ? kit1 : (teamA.kit === 2 ? kit2 : kit3) }
+						src={KITS[teamA.kit]}
 						alt='team kit'
 						className='team-kit'
 						style={{backgroundColor: teamA.color}}
 					/>
-					<h1 className='mb-3 text-white'>{ teamA.score }</h1>
+					<h1 className='mb-3 text-white'>{teamA.score}</h1>
 					<Button
-						onClick={ handleTeamAScore }
+						onClick={handleTeamAScore}
 						className='px-5'
 						variant='success'
 					>
@@ -93,7 +99,7 @@ const FootballPitch = () => {
 						{teamB.name}
 					</h1>
 					<img
-						src={ teamB.kit === 1 ? kit1 : (teamB.kit === 2 ? kit2 : kit3) }
+						src={KITS[teamB.kit]}
 						alt='team kit'
 						className='team-kit'
 						style={{backgroundColor: teamB.color}}
