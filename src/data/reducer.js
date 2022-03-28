@@ -34,42 +34,45 @@ const shufflePlayers = (state) => {
 
 // generate the teams and store them in state
 const generateTeams = (state) => {
+	const { playersPool, teamA, teamB } = state;
 
-	let firstHalf = state.playersPool.filter((_, index) => index < state.playersPool.length / 2);
-	let secondHalf = state.playersPool.filter((_, index) => index >= state.playersPool.length / 2);
+	const half = Math.ceil(playersPool.length / 2);    
+	const firstHalf = playersPool.slice(0, half)
+	const secondHalf = playersPool.slice(-half)
 
 	return {
 		...state,
 		teamA: {
-			...state.teamA,
-			players: [...firstHalf],
+			...teamA,
+			players: firstHalf,
 		},
 		teamB: {
-			...state.teamB,
-			players: [...secondHalf],
+			...teamB,
+			players: secondHalf,
 		}
 	}
 }
 
 // calculate the teams total skill level
 const totalSkillLevel = (state) => {
+	const { teamA, teamB } = state;
     
-	let teamASkill = state.teamA.players.reduce((acc, player) => {
+	let teamASkill = teamA.players.reduce((acc, player) => {
 		return acc + player.skillLevel.length
 	}, 0)
 
-	let teamBSkill = state.teamB.players.reduce((acc, player) => {
+	let teamBSkill = teamB.players.reduce((acc, player) => {
 		return acc + player.skillLevel.length
 	}, 0)
 
 	return {
 		...state,
 		teamA: {
-			...state.teamA,
+			...teamA,
 			totalSkillLevel: teamASkill,
 		},
 		teamB: {
-			...state.teamB,
+			...teamB,
 			totalSkillLevel: teamBSkill,
 		}
 	}

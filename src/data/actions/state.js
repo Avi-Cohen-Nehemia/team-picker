@@ -25,7 +25,7 @@ export const selectTeamAKit = (data) => {
 	return {
 		type: "SELECT_TEAM_A_KIT",
 		teamA: {
-			kit: data.selected,
+			kit: data,
 		} 
 	}
 }
@@ -34,7 +34,7 @@ export const selectTeamBKit = (data) => {
 	return {
 		type: "SELECT_TEAM_B_KIT",
 		teamB: {
-			kit: data.selected,
+			kit: data,
 		} 
 	}
 }
@@ -43,7 +43,7 @@ export const selectTeamAColor = (data) => {
 	return {
 		type: "SELECT_TEAM_A_COLOR",
 		teamA: {
-			color: data.color,
+			color: data,
 		} 
 	}
 }
@@ -52,7 +52,7 @@ export const selectTeamBColor = (data) => {
 	return {
 		type: "SELECT_TEAM_B_COLOR",
 		teamB: {
-			color: data.color,
+			color: data,
 		} 
 	}
 }
