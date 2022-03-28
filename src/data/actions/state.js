@@ -39,22 +39,12 @@ export const selectTeamBKit = (data) => {
 	}
 }
 
-export const selectTeamAColor = (data) => {
+export const selectTeamColor = (data, team) => {
 	return {
-		type: "SELECT_TEAM_A_COLOR",
-		teamA: {
-			color: data,
-		} 
-	}
-}
-
-export const selectTeamBColor = (data) => {
-	return {
-		type: "SELECT_TEAM_B_COLOR",
-		teamB: {
-			color: data,
-		} 
-	}
+		type: "SELECT_TEAM_COLOR",
+		team: team,
+		color: data,
+	} 
 }
 
 export const setTeamsNames = (data) => {

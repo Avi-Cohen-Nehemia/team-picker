@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectTeamAKit, selectTeamAColor, selectTeamBKit, selectTeamBColor } from "../../data/actions/state";
+import { selectTeamAKit, selectTeamColor, selectTeamBKit } from "../../data/actions/state";
 import Form from 'react-bootstrap/Form';
 import { CirclePicker } from 'react-color';
 import './../../assets/css/kits.css'
@@ -22,9 +22,9 @@ const Kit = ({team}) => {
 
 	const handleColorPicker = (color, team) => {
 		if (team === 'a') {
-			dispatch(selectTeamAColor(color.hex))
+			dispatch(selectTeamColor(color.hex, 'teamA'))
 		} else {
-			dispatch(selectTeamBColor(color.hex))
+			dispatch(selectTeamColor(color.hex, 'teamB'))
 		}
 	};
 
